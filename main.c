@@ -212,7 +212,7 @@ void fraim_out (int kll){
  
 	for (int i = 0; i < 350; ++i) {
 		PORTB = eff1[l];
-		_delay_us(1000);
+		_delay_us(1000);//пауза для задания скорости движения бегущей строки
 		switch (l){
 			case 0:
 			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
