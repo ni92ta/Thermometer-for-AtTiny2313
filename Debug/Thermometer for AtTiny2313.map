@@ -1,0 +1,613 @@
+Archive member included to satisfy reference by file (symbol)
+
+d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+                              main.o (__udivmodqi4)
+d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+                              main.o (__divmodhi4)
+d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+                              D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o (exit)
+d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+                              main.o (__do_copy_data)
+d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+                              d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+t                   0x1               main.o
+cc                  0x1               main.o
+l                   0x2               main.o
+bb                  0x1               main.o
+aa                  0x1               main.o
+i                   0x1               DS18B20.o
+start_run_fraim     0x1               main.o
+vpo                 0x1               main.o
+y                   0x2               main.o
+bt                  0x1               DS18B20.o
+buf                 0x12              main.o
+dt                  0x1               DS18B20.o
+start_izm           0x1               main.o
+start_tim           0x1               main.o
+time_tim            0x1               main.o
+ttt                 0x1               main.o
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ .bss           0x0000000000000000        0x0 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ .text          0x0000000000000000        0x0 main.o
+ .data          0x0000000000000000        0x0 main.o
+ .bss           0x0000000000000000        0x0 main.o
+ .text.timer_ini
+                0x0000000000000000       0x16 main.o
+ .text          0x0000000000000000        0x0 DS18B20.o
+ .data          0x0000000000000000        0x0 DS18B20.o
+ .bss           0x0000000000000000        0x0 DS18B20.o
+ .text          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .data          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .bss           0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .text.libgcc   0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+ .text          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .data          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+ .text          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000000800 xr
+data             0x0000000000800060 0x0000000000000080 rw !x
+eeprom           0x0000000000810000 0x0000000000000080 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+LOAD main.o
+LOAD DS18B20.o
+START GROUP
+LOAD d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libm.a
+END GROUP
+START GROUP
+LOAD d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a
+LOAD d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libm.a
+LOAD d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a
+LOAD D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const\libattiny2313a.a
+END GROUP
+                0x0000000000000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x0000000000800060]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x0000000000000800]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x2000
+                [0x0000000000000080]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x0000000000000080]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000       0x88
+ *(.vectors)
+ .vectors       0x0000000000000000       0x2a D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+                0x0000000000000000                __vector_default
+                0x0000000000000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.dinit)
+ .dinit         0x000000000000002a       0x11 data_init
+                0x000000000000003c                . = ALIGN (0x2)
+ *fill*         0x000000000000003b        0x1 
+                0x000000000000003c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000000000003c        0x0 linker stubs
+ *(.trampolines*)
+                0x000000000000003c                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+                0x000000000000003c                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000000003c                __ctors_start = .
+ *(.ctors)
+                0x000000000000003c                __ctors_end = .
+                0x000000000000003c                __dtors_start = .
+ *(.dtors)
+                0x000000000000003c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000000003c        0x0 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+                0x000000000000003c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000000003c        0x8 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000044       0x3c d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
+                0x0000000000000044                __do_copy_data
+                0x0000000000000072                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000000000000080        0x4 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ *(.init9)
+                0x0000000000000084                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000000084        0x0 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+                0x0000000000000084                _exit
+                0x0000000000000084                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000000084        0x4 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000000088                _etext = .
+
+.data           0x0000000000800060        0x0 load address 0x0000000000000088
+                [!provide]                        PROVIDE (__data_start, .)
+ *(.gnu.linkonce.d*)
+ *(.gnu.linkonce.r*)
+                0x0000000000800060                . = ALIGN (0x2)
+ *fill*         0x0000000000800060        0x0 
+                0x0000000000800060                _edata = .
+                [!provide]                        PROVIDE (__data_end, .)
+
+.bss            0x0000000000800060       0x23
+                [!provide]                        PROVIDE (__bss_start, .)
+ *(COMMON)
+ COMMON         0x0000000000800060       0x20 main.o
+                0x0000000000800060                t
+                0x0000000000800061                cc
+                0x0000000000800062                l
+                0x0000000000800064                bb
+                0x0000000000800065                aa
+                0x0000000000800066                start_run_fraim
+                0x0000000000800067                vpo
+                0x0000000000800068                y
+                0x000000000080006a                buf
+                0x000000000080007c                start_izm
+                0x000000000080007d                start_tim
+                0x000000000080007e                time_tim
+                0x000000000080007f                ttt
+ COMMON         0x0000000000800080        0x3 DS18B20.o
+                0x0000000000800080                i
+                0x0000000000800081                bt
+                0x0000000000800082                dt
+                [!provide]                        PROVIDE (__bss_end, .)
+                0x0000000000000088                __data_load_start = LOADADDR (.data)
+                0x0000000000000088                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800083        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800083                _end = .
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x2f
+ *(.comment)
+ .comment       0x0000000000000000       0x2f main.o
+                                         0x30 (size before relaxing)
+ .comment       0x000000000000002f       0x30 DS18B20.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x88
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x38 main.o
+ .debug_aranges
+                0x0000000000000038       0x50 DS18B20.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x1108
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x456 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ .debug_info    0x0000000000000456      0x572 main.o
+ .debug_info    0x00000000000009c8      0x740 DS18B20.o
+
+.debug_abbrev   0x0000000000000000      0x742
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x41b D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ .debug_abbrev  0x000000000000041b      0x171 main.o
+ .debug_abbrev  0x000000000000058c      0x1b6 DS18B20.o
+
+.debug_line     0x0000000000000000      0x819
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x10f D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ .debug_line    0x000000000000010f      0x445 main.o
+ .debug_line    0x0000000000000554      0x2c5 DS18B20.o
+
+.debug_frame    0x0000000000000000      0x114
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x70 main.o
+ .debug_frame   0x0000000000000070       0xa4 DS18B20.o
+
+.debug_str      0x0000000000000000      0x1b6
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x17b D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+ .debug_str     0x000000000000017b       0x15 main.o
+ .debug_str     0x0000000000000190       0x26 DS18B20.o
+
+.debug_loc      0x0000000000000000      0x66f
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x245 main.o
+ .debug_loc     0x0000000000000245      0x42a DS18B20.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000       0x80
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x40 main.o
+ .debug_ranges  0x0000000000000040       0x40 DS18B20.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(Thermometer for AtTiny2313.elf elf32-avr)
+LOAD linker stubs
+LOAD data_init
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+
+.bss.eff1       0x000000000080009b       0x12
+ .bss.eff1      0x000000000080009b       0x12 main.o
+                0x000000000080009b                eff1
+
+.text.fraim_out
+                0x0000000000000088      0x3b8
+ .text.fraim_out
+                0x0000000000000088      0x3b8 main.o
+                0x0000000000000088                fraim_out
+
+.text.dt_check  0x0000000000000440       0x54
+ .text.dt_check
+                0x0000000000000440       0x54 DS18B20.o
+                0x0000000000000440                dt_check
+
+.text.dt_testdevice
+                0x0000000000000494       0x42
+ .text.dt_testdevice
+                0x0000000000000494       0x42 DS18B20.o
+                0x0000000000000494                dt_testdevice
+
+.text.dt_sendbyte
+                0x00000000000004d6       0x3e
+ .text.dt_sendbyte
+                0x00000000000004d6       0x3e DS18B20.o
+                0x00000000000004d6                dt_sendbyte
+
+.text.dt_readbit
+                0x0000000000000514       0x3e
+ .text.dt_readbit
+                0x0000000000000514       0x3e DS18B20.o
+                0x0000000000000514                dt_readbit
+
+.text.dt_readbyte
+                0x0000000000000552       0x2a
+ .text.dt_readbyte
+                0x0000000000000552       0x2a DS18B20.o
+                0x0000000000000552                dt_readbyte
+
+.text.dt_sendbit
+                0x000000000000057c       0x28
+ .text.dt_sendbit
+                0x000000000000057c       0x28 DS18B20.o
+                0x000000000000057c                dt_sendbit
+
+.text.libgcc.div
+                0x00000000000005a4       0x28
+ .text.libgcc.div
+                0x00000000000005a4       0x28 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodhi4.o)
+                0x00000000000005a4                __udivmodhi4
+
+.text.__vector_13
+                0x00000000000005cc       0x26
+ .text.__vector_13
+                0x00000000000005cc       0x26 main.o
+                0x00000000000005cc                __vector_13
+
+.text.libgcc.div
+                0x00000000000005f2       0x26
+ .text.libgcc.div
+                0x00000000000005f2       0x26 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_divmodhi4.o)
+                0x00000000000005f2                _div
+                0x00000000000005f2                __divmodhi4
+
+.text.libgcc.div
+                0x0000000000000618       0x18
+ .text.libgcc.div
+                0x0000000000000618       0x18 d:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_udivmodqi4.o)
+                0x0000000000000618                __udivmodqi4
+
+.text.main      0x0000000000000630       0x14
+ .text.main     0x0000000000000630       0x14 main.o
+                0x0000000000000630                main
+
+.text.converttemp
+                0x0000000000000644        0x6
+ .text.converttemp
+                0x0000000000000644        0x6 DS18B20.o
+                0x0000000000000644                converttemp
+
+.text           0x000000000000064a        0x2
+ .text          0x000000000000064a        0x2 D:/Program Files/Microchip/xc8/v2.31/dfp/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny2313a.o
+                0x000000000000064a                __vector_1
+                0x000000000000064a                __vector_12
+                0x000000000000064a                __bad_interrupt
+                0x000000000000064a                __vector_6
+                0x000000000000064a                __vector_3
+                0x000000000000064a                __vector_11
+                0x000000000000064a                __vector_17
+                0x000000000000064a                __vector_19
+                0x000000000000064a                __vector_7
+                0x000000000000064a                __vector_5
+                0x000000000000064a                __vector_4
+                0x000000000000064a                __vector_9
+                0x000000000000064a                __vector_2
+                0x000000000000064a                __vector_15
+                0x000000000000064a                __vector_8
+                0x000000000000064a                __vector_14
+                0x000000000000064a                __vector_10
+                0x000000000000064a                __vector_16
+                0x000000000000064a                __vector_18
+                0x000000000000064a                __vector_20
+
+.data.efi       0x0000000000800083       0x18 load address 0x000000000000064c
+ .data.efi      0x0000000000800083       0x18 main.o
+                0x0000000000800083                efi
