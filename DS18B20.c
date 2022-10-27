@@ -93,25 +93,20 @@ int dt_check(void)//функция преобразования показани
 	if(dt_testdevice()==1) //если устройство нашлось
 	{
 		dt_sendbyte(MATCH_ROM);
-		dt_sendbyte(0x10);
-if (dt_testdevice()) dt_sendbyte(0x0E); 
-if (dt_testdevice()) dt_sendbyte(0xBE); 
-if (dt_testdevice()) dt_sendbyte(0x16); 
-if (dt_testdevice()) dt_sendbyte(0x02); 
-if (dt_testdevice()) dt_sendbyte(0x08); 
-if (dt_testdevice()) dt_sendbyte(0x0); 
-if (dt_testdevice()) dt_sendbyte(0x16);
+		if(dt_sendbyte(0x10)&dt_readbyte());
 
-/*dt_sendbyte(0x0E);
+
+dt_sendbyte(0x0E);
 dt_sendbyte(0xBE);
 dt_sendbyte(0x16);
 dt_sendbyte(0x02);
 dt_sendbyte(0x08);
-dt_sendbyte(0x0);*/
+dt_sendbyte(0x0);
 
-		//dt_sendbyte(0x16);
-		
-		if (dt_testdevice()) dt_sendbyte(T_CONVERT); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
+		dt_sendbyte(0x16);
+		dt_testdevice(); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
+		//dt_sendbyte(NOID);
+		dt_sendbyte(T_CONVERT); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
 		//dt_sendbyte(T_CONVERT);//44 измеряем температуру
 		//_delay_ms(1); //в 12битном режиме преобразования - 750 милисекунд
 		//dt_testdevice(); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
