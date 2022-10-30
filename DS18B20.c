@@ -93,7 +93,7 @@ int dt_check(void)//функция преобразования показани
 	if(dt_testdevice()==1) //если устройство нашлось
 	{
 		dt_sendbyte(MATCH_ROM);
-		if(dt_sendbyte(0x10)&dt_readbyte());
+		dt_sendbyte(0x10);
 
 
 dt_sendbyte(0x0E);
