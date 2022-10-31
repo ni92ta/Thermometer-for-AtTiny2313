@@ -15,11 +15,30 @@ int identifi [8] = {0b00001000,0b01110000,0b01111101,0b01101000,0b01000000,0b000
 	
 	//int identifi [8] = {0b00010000,0b00001110,0b10111110,0b00010110,0b00000010,0b00001000,0b00000000,0b00010110};
 	
+//====================================
+void ds18x2_sel(void){
+
+dt_sendbyte(MATCH_ROM);
+//unsigned char o;
+//for (o=0;o<8;o++){
+		//dt_sendbyte(MATCH_ROM);
+		dt_sendbyte(0x10);
+
+		dt_sendbyte(0x0E);
+		dt_sendbyte(0xBE);
+		dt_sendbyte(0x16);
+		dt_sendbyte(0x02);
+		dt_sendbyte(0x08);
+		dt_sendbyte(0x0);
+		dt_sendbyte(0x16);		
+//}
+	
+}
 char dt_testdevice(void) //dt - digital termomether | определим, есть ли устройство на шине
 {
 
-	//	char stektemp=SREG;// сохраним значение стека
-	//	cli(); //запрещаем прерывание
+		//char stektemp=SREG;// сохраним значение стека
+		//cli(); //запрещаем прерывание
 	DDRTEMP |= 1<<BITTEMP;  //притягиваем шину  |= 0x20; 
 	_delay_us(500); //задержка как минимум на 480 микросекунд
 	DDRTEMP &= ~(1<<BITTEMP); //отпускаем шину  &= ~0x20;
@@ -92,26 +111,17 @@ int dt_check(void)//функция преобразования показани
 	unsigned int tt=0;
 	if(dt_testdevice()==1) //если устройство нашлось
 	{
-		dt_sendbyte(MATCH_ROM);
-		dt_sendbyte(0x10);
+//ds18x2_sel();
 
 
-dt_sendbyte(0x0E);
-dt_sendbyte(0xBE);
-dt_sendbyte(0x16);
-dt_sendbyte(0x02);
-dt_sendbyte(0x08);
-dt_sendbyte(0x0);
-
-		dt_sendbyte(0x16);
 		dt_testdevice(); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
-		//dt_sendbyte(NOID);
+		dt_sendbyte(NOID);
 		dt_sendbyte(T_CONVERT); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
 		//dt_sendbyte(T_CONVERT);//44 измеряем температуру
-		//_delay_ms(1); //в 12битном режиме преобразования - 750 милисекунд
-		//dt_testdevice(); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
-		//dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
-		
+		_delay_ms(1); //в 12битном режиме преобразования - 750 милисекунд
+		dt_testdevice(); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
+		dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
+		dt_sendbyte(NOID);//CC пропустить идентификацию, тк у нас только одно устройство на шине
 		//dt_sendbyte(NOID);//CC пропустить идентификацию, тк у нас только одно устройство на шине
 		//dt_sendbyte(T_CONVERT);//44 измеряем температуру
 		//_delay_ms(1); //в 12битном режиме преобразования - 750 милисекунд
@@ -124,8 +134,8 @@ dt_sendbyte(0x0);
 		//_delay_us(250);	
 		//}
 		
-		//bt = dt_readbyte(); //читаем младший бит
-		//tt = dt_readbyte(); //читаем старший бит MS
+		bt = dt_readbyte(); //читаем младший бит
+		tt = dt_readbyte(); //читаем старший бит MS
 
 		tt = bt;//(tt<<8)|bt;//сдвигаем старший влево, младший пишем на его место, тем самым получаем общий результат
 	}
