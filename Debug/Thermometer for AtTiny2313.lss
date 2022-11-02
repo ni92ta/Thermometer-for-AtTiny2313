@@ -7,85 +7,87 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .data         00000000  00800060  00000088  00000534  2**0
                   ALLOC
-  2 .bss          00000023  00800060  00800060  00000758  2**0
+  2 .bss          00000023  00800060  00800060  0000075e  2**0
                   ALLOC
-  3 .comment      0000002f  00000000  00000000  00000758  2**0
+  3 .comment      0000002f  00000000  00000000  0000075e  2**0
                   CONTENTS, READONLY
-  4 .debug_aranges 00000088  00000000  00000000  00000787  2**0
+  4 .debug_aranges 00000090  00000000  00000000  0000078d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00001108  00000000  00000000  0000080f  2**0
+  5 .debug_info   000011e2  00000000  00000000  0000081d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000742  00000000  00000000  00001917  2**0
+  6 .debug_abbrev 00000754  00000000  00000000  000019ff  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000819  00000000  00000000  00002059  2**0
+  7 .debug_line   00000834  00000000  00000000  00002153  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000114  00000000  00000000  00002874  2**2
+  8 .debug_frame  00000124  00000000  00000000  00002988  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000001b6  00000000  00000000  00002988  2**0
+  9 .debug_str    000001b6  00000000  00000000  00002aac  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0000066f  00000000  00000000  00002b3e  2**0
+ 10 .debug_loc    0000066f  00000000  00000000  00002c62  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000080  00000000  00000000  000031ad  2**0
+ 11 .debug_ranges 00000088  00000000  00000000  000032d1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .text         00000002  0000064a  0000064a  0000073e  2**1
+ 12 .text         00000002  00000650  00000650  00000744  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00003230  2**2
+ 13 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000335c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .text.__vector_13 00000026  000005cc  000005cc  000006c0  2**1
+ 14 .text.__vector_13 00000026  000005ac  000005ac  000006a0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
  15 .text.fraim_out 000003b8  00000088  00000088  0000017c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .text.main    00000014  00000630  00000630  00000724  2**1
+ 16 .text.main    00000014  00000636  00000636  0000072a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .bss.eff1     00000012  0080009b  0080009b  00000758  2**0
+ 17 .bss.eff1     00000012  0080009b  0080009b  0000075e  2**0
                   ALLOC
- 18 .data.efi     00000018  00800083  0000064c  00000740  2**0
+ 18 .data.efi     00000018  00800083  00000652  00000746  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 19 .text.dt_testdevice 00000042  00000494  00000494  00000588  2**1
+ 19 .text.dt_testdevice 00000042  00000440  00000440  00000534  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 20 .text.dt_sendbit 00000028  0000057c  0000057c  00000670  2**1
+ 20 .text.dt_sendbit 00000028  0000055c  0000055c  00000650  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.dt_sendbyte 0000003e  000004d6  000004d6  000005ca  2**1
+ 21 .text.dt_sendbyte 0000003e  00000482  00000482  00000576  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text.dt_readbit 0000003e  00000514  00000514  00000608  2**1
+ 22 .text.ds18x2_sel 00000026  000005d2  000005d2  000006c6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 23 .text.dt_readbyte 0000002a  00000552  00000552  00000646  2**1
+ 23 .text.dt_readbit 0000003e  000004c0  000004c0  000005b4  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 24 .text.dt_check 00000054  00000440  00000440  00000534  2**1
+ 24 .text.dt_readbyte 0000002a  00000532  00000532  00000626  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 25 .text.converttemp 00000006  00000644  00000644  00000738  2**1
+ 25 .text.dt_check 00000034  000004fe  000004fe  000005f2  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 26 .text.libgcc.div 00000018  00000618  00000618  0000070c  2**1
+ 26 .text.converttemp 00000006  0000064a  0000064a  0000073e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 27 .text.libgcc.div 00000026  000005f2  000005f2  000006e6  2**1
+ 27 .text.libgcc.div 00000018  0000061e  0000061e  00000712  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 28 .text.libgcc.div 00000028  000005a4  000005a4  00000698  2**1
+ 28 .text.libgcc.div 00000026  000005f8  000005f8  000006ec  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text.libgcc.div 00000028  00000584  00000584  00000678  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	1d c0       	rjmp	.+58     	; 0x3c <__ctors_end>
-   2:	23 c3       	rjmp	.+1606   	; 0x64a <__bad_interrupt>
-   4:	22 c3       	rjmp	.+1604   	; 0x64a <__bad_interrupt>
-   6:	21 c3       	rjmp	.+1602   	; 0x64a <__bad_interrupt>
-   8:	20 c3       	rjmp	.+1600   	; 0x64a <__bad_interrupt>
-   a:	1f c3       	rjmp	.+1598   	; 0x64a <__bad_interrupt>
-   c:	1e c3       	rjmp	.+1596   	; 0x64a <__bad_interrupt>
-   e:	1d c3       	rjmp	.+1594   	; 0x64a <__bad_interrupt>
-  10:	1c c3       	rjmp	.+1592   	; 0x64a <__bad_interrupt>
-  12:	1b c3       	rjmp	.+1590   	; 0x64a <__bad_interrupt>
-  14:	1a c3       	rjmp	.+1588   	; 0x64a <__bad_interrupt>
-  16:	19 c3       	rjmp	.+1586   	; 0x64a <__bad_interrupt>
-  18:	18 c3       	rjmp	.+1584   	; 0x64a <__bad_interrupt>
-  1a:	d8 c2       	rjmp	.+1456   	; 0x5cc <__vector_13>
-  1c:	16 c3       	rjmp	.+1580   	; 0x64a <__bad_interrupt>
-  1e:	15 c3       	rjmp	.+1578   	; 0x64a <__bad_interrupt>
-  20:	14 c3       	rjmp	.+1576   	; 0x64a <__bad_interrupt>
-  22:	13 c3       	rjmp	.+1574   	; 0x64a <__bad_interrupt>
-  24:	12 c3       	rjmp	.+1572   	; 0x64a <__bad_interrupt>
-  26:	11 c3       	rjmp	.+1570   	; 0x64a <__bad_interrupt>
-  28:	10 c3       	rjmp	.+1568   	; 0x64a <__bad_interrupt>
+   2:	26 c3       	rjmp	.+1612   	; 0x650 <__bad_interrupt>
+   4:	25 c3       	rjmp	.+1610   	; 0x650 <__bad_interrupt>
+   6:	24 c3       	rjmp	.+1608   	; 0x650 <__bad_interrupt>
+   8:	23 c3       	rjmp	.+1606   	; 0x650 <__bad_interrupt>
+   a:	22 c3       	rjmp	.+1604   	; 0x650 <__bad_interrupt>
+   c:	21 c3       	rjmp	.+1602   	; 0x650 <__bad_interrupt>
+   e:	20 c3       	rjmp	.+1600   	; 0x650 <__bad_interrupt>
+  10:	1f c3       	rjmp	.+1598   	; 0x650 <__bad_interrupt>
+  12:	1e c3       	rjmp	.+1596   	; 0x650 <__bad_interrupt>
+  14:	1d c3       	rjmp	.+1594   	; 0x650 <__bad_interrupt>
+  16:	1c c3       	rjmp	.+1592   	; 0x650 <__bad_interrupt>
+  18:	1b c3       	rjmp	.+1590   	; 0x650 <__bad_interrupt>
+  1a:	c8 c2       	rjmp	.+1424   	; 0x5ac <__vector_13>
+  1c:	19 c3       	rjmp	.+1586   	; 0x650 <__bad_interrupt>
+  1e:	18 c3       	rjmp	.+1584   	; 0x650 <__bad_interrupt>
+  20:	17 c3       	rjmp	.+1582   	; 0x650 <__bad_interrupt>
+  22:	16 c3       	rjmp	.+1580   	; 0x650 <__bad_interrupt>
+  24:	15 c3       	rjmp	.+1578   	; 0x650 <__bad_interrupt>
+  26:	14 c3       	rjmp	.+1576   	; 0x650 <__bad_interrupt>
+  28:	13 c3       	rjmp	.+1574   	; 0x650 <__bad_interrupt>
 
 0000002a <.dinit>:
   2a:	00 60       	ori	r16, 0x00	; 0
@@ -93,7 +95,7 @@ Disassembly of section .text:
   2e:	80 00       	.word	0x0080	; ????
   30:	83 00       	.word	0x0083	; ????
   32:	9b 00       	.word	0x009b	; ????
-  34:	06 4c       	sbci	r16, 0xC6	; 198
+  34:	06 52       	subi	r16, 0x26	; 38
   36:	00 9b       	sbis	0x00, 0	; 0
   38:	00 ad       	ldd	r16, Z+56	; 0x38
   3a:	80 00       	.word	0x0080	; ????
@@ -137,7 +139,7 @@ Disassembly of section .text:
   7a:	eb 33       	cpi	r30, 0x3B	; 59
   7c:	f4 07       	cpc	r31, r20
   7e:	31 f7       	brne	.-52     	; 0x4c <__do_copy_data+0x8>
-  80:	d7 d2       	rcall	.+1454   	; 0x630 <main>
+  80:	da d2       	rcall	.+1460   	; 0x636 <main>
   82:	00 c0       	rjmp	.+0      	; 0x84 <_exit>
 
 00000084 <_exit>:
@@ -148,39 +150,39 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-0000064a <__bad_interrupt>:
- 64a:	da cc       	rjmp	.-1612   	; 0x0 <__vectors>
+00000650 <__bad_interrupt>:
+ 650:	d7 cc       	rjmp	.-1618   	; 0x0 <__TEXT_REGION_ORIGIN__>
 
 Disassembly of section .text.__vector_13:
 
-000005cc <__vector_13>:
+000005ac <__vector_13>:
 		  _delay_ms(2);
 	 }
  }*/
  //------------функция-обработчик таймера-------------
  ISR (TIMER0_COMPA_vect)//	TIMER0_COMPA_vect   
  {
- 5cc:	1f 92       	push	r1
- 5ce:	0f 92       	push	r0
- 5d0:	0f b6       	in	r0, 0x3f	; 63
- 5d2:	0f 92       	push	r0
- 5d4:	11 24       	eor	r1, r1
- 5d6:	8f 93       	push	r24
+ 5ac:	1f 92       	push	r1
+ 5ae:	0f 92       	push	r0
+ 5b0:	0f b6       	in	r0, 0x3f	; 63
+ 5b2:	0f 92       	push	r0
+ 5b4:	11 24       	eor	r1, r1
+ 5b6:	8f 93       	push	r24
 time_tim++;
- 5d8:	80 91 7e 00 	lds	r24, 0x007E	; 0x80007e <time_tim>
- 5dc:	8f 5f       	subi	r24, 0xFF	; 255
- 5de:	80 93 7e 00 	sts	0x007E, r24	; 0x80007e <time_tim>
+ 5b8:	80 91 7e 00 	lds	r24, 0x007E	; 0x80007e <time_tim>
+ 5bc:	8f 5f       	subi	r24, 0xFF	; 255
+ 5be:	80 93 7e 00 	sts	0x007E, r24	; 0x80007e <time_tim>
 	 TIMSK = 0b00000000;
- 5e2:	19 be       	out	0x39, r1	; 57
+ 5c2:	19 be       	out	0x39, r1	; 57
 	 TCCR0B = 0b00000000;//останавливаем таймер
- 5e4:	13 be       	out	0x33, r1	; 51
+ 5c4:	13 be       	out	0x33, r1	; 51
  }
- 5e6:	8f 91       	pop	r24
- 5e8:	0f 90       	pop	r0
- 5ea:	0f be       	out	0x3f, r0	; 63
- 5ec:	0f 90       	pop	r0
- 5ee:	1f 90       	pop	r1
- 5f0:	18 95       	reti
+ 5c6:	8f 91       	pop	r24
+ 5c8:	0f 90       	pop	r0
+ 5ca:	0f be       	out	0x3f, r0	; 63
+ 5cc:	0f 90       	pop	r0
+ 5ce:	1f 90       	pop	r1
+ 5d0:	18 95       	reti
 
 Disassembly of section .text.fraim_out:
 
@@ -200,28 +202,28 @@ Disassembly of section .text.fraim_out:
   98:	81 e0       	ldi	r24, 0x01	; 1
   9a:	80 93 7d 00 	sts	0x007D, r24	; 0x80007d <start_tim>
   9e:	10 92 7e 00 	sts	0x007E, r1	; 0x80007e <time_tim>
-  a2:	30 91 60 00 	lds	r19, 0x0060	; 0x800060 <_edata>
+  a2:	30 91 60 00 	lds	r19, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
   a6:	30 93 7f 00 	sts	0x007F, r19	; 0x80007f <ttt>
   aa:	4a e0       	ldi	r20, 0x0A	; 10
   ac:	83 2f       	mov	r24, r19
   ae:	64 2f       	mov	r22, r20
-  b0:	b3 d2       	rcall	.+1382   	; 0x618 <__udivmodqi4>
+  b0:	b6 d2       	rcall	.+1388   	; 0x61e <__udivmodqi4>
   b2:	29 2f       	mov	r18, r25
   b4:	83 2f       	mov	r24, r19
   b6:	64 e6       	ldi	r22, 0x64	; 100
-  b8:	af d2       	rcall	.+1374   	; 0x618 <__udivmodqi4>
+  b8:	b2 d2       	rcall	.+1380   	; 0x61e <__udivmodqi4>
   ba:	89 2f       	mov	r24, r25
   bc:	64 2f       	mov	r22, r20
-  be:	ac d2       	rcall	.+1368   	; 0x618 <__udivmodqi4>
+  be:	af d2       	rcall	.+1374   	; 0x61e <__udivmodqi4>
   c0:	e8 2f       	mov	r30, r24
   c2:	83 2f       	mov	r24, r19
   c4:	90 e0       	ldi	r25, 0x00	; 0
   c6:	68 ee       	ldi	r22, 0xE8	; 232
   c8:	73 e0       	ldi	r23, 0x03	; 3
-  ca:	93 d2       	rcall	.+1318   	; 0x5f2 <__divmodhi4>
+  ca:	96 d2       	rcall	.+1324   	; 0x5f8 <__divmodhi4>
   cc:	64 e6       	ldi	r22, 0x64	; 100
   ce:	70 e0       	ldi	r23, 0x00	; 0
-  d0:	90 d2       	rcall	.+1312   	; 0x5f2 <__divmodhi4>
+  d0:	93 d2       	rcall	.+1318   	; 0x5f8 <__divmodhi4>
   d2:	a2 2f       	mov	r26, r18
   d4:	b0 e0       	ldi	r27, 0x00	; 0
   d6:	aa 0f       	add	r26, r26
@@ -446,9 +448,9 @@ Disassembly of section .text.fraim_out:
  2b6:	b3 8b       	std	Z+19, r27	; 0x13
  2b8:	a2 8b       	std	Z+18, r26	; 0x12
  2ba:	88 cf       	rjmp	.-240    	; 0x1cc <__stack+0xed>
- 2bc:	c1 d0       	rcall	.+386    	; 0x440 <dt_check>
- 2be:	c2 d1       	rcall	.+900    	; 0x644 <converttemp>
- 2c0:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+ 2bc:	20 d1       	rcall	.+576    	; 0x4fe <dt_check>
+ 2be:	c5 d1       	rcall	.+906    	; 0x64a <converttemp>
+ 2c0:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
  2c4:	eb e9       	ldi	r30, 0x9B	; 155
  2c6:	f0 e0       	ldi	r31, 0x00	; 0
  2c8:	13 82       	std	Z+3, r1	; 0x03
@@ -572,9 +574,9 @@ Disassembly of section .text.fraim_out:
  3d4:	31 09       	sbc	r19, r1
  3d6:	30 93 63 00 	sts	0x0063, r19	; 0x800063 <l+0x1>
  3da:	20 93 62 00 	sts	0x0062, r18	; 0x800062 <l>
- 3de:	30 d0       	rcall	.+96     	; 0x440 <dt_check>
- 3e0:	31 d1       	rcall	.+610    	; 0x644 <converttemp>
- 3e2:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+ 3de:	8f d0       	rcall	.+286    	; 0x4fe <dt_check>
+ 3e0:	34 d1       	rcall	.+616    	; 0x64a <converttemp>
+ 3e2:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
  3e6:	80 91 66 00 	lds	r24, 0x0066	; 0x800066 <start_run_fraim>
  3ea:	84 31       	cpi	r24, 0x14	; 20
  3ec:	a8 f0       	brcs	.+42     	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
@@ -618,458 +620,481 @@ Disassembly of section .text.fraim_out:
 
 Disassembly of section .text.main:
 
-00000630 <main>:
+00000636 <main>:
 }
 }
 //-----------------------------------------------------
 int main(void)
 {
     sei();//разрешаем глобальные прерывания
- 630:	78 94       	sei
+ 636:	78 94       	sei
 	DDRB = 0b11111111;// определяем выходы мк (1 выход; 0 вход); 
- 632:	8f ef       	ldi	r24, 0xFF	; 255
- 634:	87 bb       	out	0x17, r24	; 23
+ 638:	8f ef       	ldi	r24, 0xFF	; 255
+ 63a:	87 bb       	out	0x17, r24	; 23
 	DDRD = 0b01001111;// определяем выходы мк (1 выход; 0 вход);
- 636:	8f e4       	ldi	r24, 0x4F	; 79
- 638:	81 bb       	out	0x11, r24	; 17
+ 63c:	8f e4       	ldi	r24, 0x4F	; 79
+ 63e:	81 bb       	out	0x11, r24	; 17
     while(1)
     {	
 		fraim_out(t);
- 63a:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
- 63e:	90 e0       	ldi	r25, 0x00	; 0
- 640:	23 dd       	rcall	.-1466   	; 0x88 <_etext>
- 642:	fb cf       	rjmp	.-10     	; 0x63a <main+0xa>
+ 640:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 644:	90 e0       	ldi	r25, 0x00	; 0
+ 646:	20 dd       	rcall	.-1472   	; 0x88 <__data_load_end>
+ 648:	fb cf       	rjmp	.-10     	; 0x640 <main+0xa>
 
 Disassembly of section .text.dt_testdevice:
 
-00000494 <dt_testdevice>:
-char dt;
+00000440 <dt_testdevice>:
 char dt_testdevice(void) //dt - digital termomether | определим, есть ли устройство на шине
 {
-	//	char stektemp=SREG;// сохраним значение стека
-	//	cli(); //запрещаем прерывание
+
+		//char stektemp=SREG;// сохраним значение стека
+		//cli(); //запрещаем прерывание
 	DDRTEMP |= 1<<BITTEMP;  //притягиваем шину  |= 0x20; 
- 494:	81 b3       	in	r24, 0x11	; 17
- 496:	80 62       	ori	r24, 0x20	; 32
- 498:	81 bb       	out	0x11, r24	; 17
+ 440:	81 b3       	in	r24, 0x11	; 17
+ 442:	80 62       	ori	r24, 0x20	; 32
+ 444:	81 bb       	out	0x11, r24	; 17
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 49a:	87 ee       	ldi	r24, 0xE7	; 231
- 49c:	93 e0       	ldi	r25, 0x03	; 3
- 49e:	01 97       	sbiw	r24, 0x01	; 1
- 4a0:	f1 f7       	brne	.-4      	; 0x49e <dt_testdevice+0xa>
- 4a2:	00 c0       	rjmp	.+0      	; 0x4a4 <dt_testdevice+0x10>
- 4a4:	00 00       	nop
+ 446:	87 ee       	ldi	r24, 0xE7	; 231
+ 448:	93 e0       	ldi	r25, 0x03	; 3
+ 44a:	01 97       	sbiw	r24, 0x01	; 1
+ 44c:	f1 f7       	brne	.-4      	; 0x44a <dt_testdevice+0xa>
+ 44e:	00 c0       	rjmp	.+0      	; 0x450 <dt_testdevice+0x10>
+ 450:	00 00       	nop
 	_delay_us(500); //задержка как минимум на 480 микросекунд
 	DDRTEMP &= ~(1<<BITTEMP); //отпускаем шину  &= ~0x20;
- 4a6:	81 b3       	in	r24, 0x11	; 17
- 4a8:	8f 7d       	andi	r24, 0xDF	; 223
- 4aa:	81 bb       	out	0x11, r24	; 17
- 4ac:	9d ea       	ldi	r25, 0xAD	; 173
- 4ae:	9a 95       	dec	r25
- 4b0:	f1 f7       	brne	.-4      	; 0x4ae <dt_testdevice+0x1a>
- 4b2:	00 00       	nop
+ 452:	81 b3       	in	r24, 0x11	; 17
+ 454:	8f 7d       	andi	r24, 0xDF	; 223
+ 456:	81 bb       	out	0x11, r24	; 17
+ 458:	9d ea       	ldi	r25, 0xAD	; 173
+ 45a:	9a 95       	dec	r25
+ 45c:	f1 f7       	brne	.-4      	; 0x45a <dt_testdevice+0x1a>
+ 45e:	00 00       	nop
 	_delay_us(65); //задержка как минимум на 60 микросекунд
 	if ((PINTEMP & (1<<BITTEMP))==0)//проверяем, ответит ли устройство
- 4b4:	85 99       	sbic	0x10, 5	; 16
- 4b6:	04 c0       	rjmp	.+8      	; 0x4c0 <dt_testdevice+0x2c>
+ 460:	85 99       	sbic	0x10, 5	; 16
+ 462:	04 c0       	rjmp	.+8      	; 0x46c <dt_testdevice+0x2c>
 	{
 		dt=1;//устройство есть
- 4b8:	81 e0       	ldi	r24, 0x01	; 1
- 4ba:	80 93 82 00 	sts	0x0082, r24	; 0x800082 <dt>
- 4be:	02 c0       	rjmp	.+4      	; 0x4c4 <dt_testdevice+0x30>
+ 464:	81 e0       	ldi	r24, 0x01	; 1
+ 466:	80 93 82 00 	sts	0x0082, r24	; 0x800082 <dt>
+ 46a:	02 c0       	rjmp	.+4      	; 0x470 <dt_testdevice+0x30>
 	}
 	else {
 		dt=0;//устройства нет
- 4c0:	10 92 82 00 	sts	0x0082, r1	; 0x800082 <dt>
- 4c4:	87 ee       	ldi	r24, 0xE7	; 231
- 4c6:	93 e0       	ldi	r25, 0x03	; 3
- 4c8:	01 97       	sbiw	r24, 0x01	; 1
- 4ca:	f1 f7       	brne	.-4      	; 0x4c8 <dt_testdevice+0x34>
- 4cc:	00 c0       	rjmp	.+0      	; 0x4ce <dt_testdevice+0x3a>
- 4ce:	00 00       	nop
+ 46c:	10 92 82 00 	sts	0x0082, r1	; 0x800082 <dt>
+ 470:	87 ee       	ldi	r24, 0xE7	; 231
+ 472:	93 e0       	ldi	r25, 0x03	; 3
+ 474:	01 97       	sbiw	r24, 0x01	; 1
+ 476:	f1 f7       	brne	.-4      	; 0x474 <dt_testdevice+0x34>
+ 478:	00 c0       	rjmp	.+0      	; 0x47a <dt_testdevice+0x3a>
+ 47a:	00 00       	nop
 	}
 	//SREG = stektemp;// вернем значение стека
 	_delay_us(500); //задержка как минимум на 480 микросекунд, но хватит и 420, тк это с учетом времени прошедших команд
 	return dt; //вернем результат
 }
- 4d0:	80 91 82 00 	lds	r24, 0x0082	; 0x800082 <dt>
- 4d4:	08 95       	ret
+ 47c:	80 91 82 00 	lds	r24, 0x0082	; 0x800082 <dt>
+ 480:	08 95       	ret
 
 Disassembly of section .text.dt_sendbit:
 
-0000057c <dt_sendbit>:
+0000055c <dt_sendbit>:
 //========================================
 void dt_sendbit(char bt)//функция записи бита на устройство
 {
 		//char stektemp=SREG;// сохраним значение стека
 		//cli(); //запрещаем прерывание
 DDRTEMP |= 1<<BITTEMP;  //притягиваем шину
- 57c:	91 b3       	in	r25, 0x11	; 17
- 57e:	90 62       	ori	r25, 0x20	; 32
- 580:	91 bb       	out	0x11, r25	; 17
- 582:	95 e0       	ldi	r25, 0x05	; 5
- 584:	9a 95       	dec	r25
- 586:	f1 f7       	brne	.-4      	; 0x584 <dt_sendbit+0x8>
- 588:	00 00       	nop
+ 55c:	91 b3       	in	r25, 0x11	; 17
+ 55e:	90 62       	ori	r25, 0x20	; 32
+ 560:	91 bb       	out	0x11, r25	; 17
+ 562:	95 e0       	ldi	r25, 0x05	; 5
+ 564:	9a 95       	dec	r25
+ 566:	f1 f7       	brne	.-4      	; 0x564 <dt_sendbit+0x8>
+ 568:	00 00       	nop
 _delay_us(2); //задержка как минимум на 2 микросекунд
 if(bt)
- 58a:	88 23       	and	r24, r24
- 58c:	19 f0       	breq	.+6      	; 0x594 <dt_sendbit+0x18>
+ 56a:	88 23       	and	r24, r24
+ 56c:	19 f0       	breq	.+6      	; 0x574 <dt_sendbit+0x18>
 DDRTEMP &= ~(1<<BITTEMP); //отпускаем шину
- 58e:	81 b3       	in	r24, 0x11	; 17
- 590:	8f 7d       	andi	r24, 0xDF	; 223
- 592:	81 bb       	out	0x11, r24	; 17
- 594:	8d ea       	ldi	r24, 0xAD	; 173
- 596:	8a 95       	dec	r24
- 598:	f1 f7       	brne	.-4      	; 0x596 <dt_sendbit+0x1a>
- 59a:	00 00       	nop
+ 56e:	81 b3       	in	r24, 0x11	; 17
+ 570:	8f 7d       	andi	r24, 0xDF	; 223
+ 572:	81 bb       	out	0x11, r24	; 17
+ 574:	8d ea       	ldi	r24, 0xAD	; 173
+ 576:	8a 95       	dec	r24
+ 578:	f1 f7       	brne	.-4      	; 0x576 <dt_sendbit+0x1a>
+ 57a:	00 00       	nop
 _delay_us(65); //задержка как минимум на 65 микросекунд
 DDRTEMP &= ~(1<<BITTEMP); //отпускаем шину
- 59c:	81 b3       	in	r24, 0x11	; 17
- 59e:	8f 7d       	andi	r24, 0xDF	; 223
- 5a0:	81 bb       	out	0x11, r24	; 17
- 5a2:	08 95       	ret
+ 57c:	81 b3       	in	r24, 0x11	; 17
+ 57e:	8f 7d       	andi	r24, 0xDF	; 223
+ 580:	81 bb       	out	0x11, r24	; 17
+ 582:	08 95       	ret
 
 Disassembly of section .text.dt_sendbyte:
 
-000004d6 <dt_sendbyte>:
+00000482 <dt_sendbyte>:
 //SREG = stektemp;// вернем значение стека
 }
 //========================================
 void dt_sendbyte(unsigned char bt)//функция записи байта на устройство
 {
- 4d6:	cf 93       	push	r28
- 4d8:	df 93       	push	r29
- 4da:	d8 2f       	mov	r29, r24
+ 482:	cf 93       	push	r28
+ 484:	df 93       	push	r29
+ 486:	d8 2f       	mov	r29, r24
 char i;
 for(i=0;i<8;i++)//посылаем отдельно каждый бит на устройство
- 4dc:	c0 e0       	ldi	r28, 0x00	; 0
- 4de:	15 c0       	rjmp	.+42     	; 0x50a <dt_sendbyte+0x34>
+ 488:	c0 e0       	ldi	r28, 0x00	; 0
+ 48a:	15 c0       	rjmp	.+42     	; 0x4b6 <dt_sendbyte+0x34>
 {
 	if((bt & (1<<i)) == 1<<i)//посылаем 1
- 4e0:	81 e0       	ldi	r24, 0x01	; 1
- 4e2:	90 e0       	ldi	r25, 0x00	; 0
- 4e4:	0c 2e       	mov	r0, r28
- 4e6:	02 c0       	rjmp	.+4      	; 0x4ec <dt_sendbyte+0x16>
- 4e8:	88 0f       	add	r24, r24
- 4ea:	99 1f       	adc	r25, r25
- 4ec:	0a 94       	dec	r0
- 4ee:	e2 f7       	brpl	.-8      	; 0x4e8 <dt_sendbyte+0x12>
- 4f0:	2d 2f       	mov	r18, r29
- 4f2:	30 e0       	ldi	r19, 0x00	; 0
- 4f4:	28 23       	and	r18, r24
- 4f6:	39 23       	and	r19, r25
- 4f8:	82 17       	cp	r24, r18
- 4fa:	93 07       	cpc	r25, r19
- 4fc:	19 f4       	brne	.+6      	; 0x504 <dt_sendbyte+0x2e>
+ 48c:	81 e0       	ldi	r24, 0x01	; 1
+ 48e:	90 e0       	ldi	r25, 0x00	; 0
+ 490:	0c 2e       	mov	r0, r28
+ 492:	02 c0       	rjmp	.+4      	; 0x498 <dt_sendbyte+0x16>
+ 494:	88 0f       	add	r24, r24
+ 496:	99 1f       	adc	r25, r25
+ 498:	0a 94       	dec	r0
+ 49a:	e2 f7       	brpl	.-8      	; 0x494 <dt_sendbyte+0x12>
+ 49c:	2d 2f       	mov	r18, r29
+ 49e:	30 e0       	ldi	r19, 0x00	; 0
+ 4a0:	28 23       	and	r18, r24
+ 4a2:	39 23       	and	r19, r25
+ 4a4:	82 17       	cp	r24, r18
+ 4a6:	93 07       	cpc	r25, r19
+ 4a8:	19 f4       	brne	.+6      	; 0x4b0 <dt_sendbyte+0x2e>
 	dt_sendbit(1);
- 4fe:	81 e0       	ldi	r24, 0x01	; 1
- 500:	3d d0       	rcall	.+122    	; 0x57c <dt_sendbit>
- 502:	02 c0       	rjmp	.+4      	; 0x508 <dt_sendbyte+0x32>
+ 4aa:	81 e0       	ldi	r24, 0x01	; 1
+ 4ac:	57 d0       	rcall	.+174    	; 0x55c <dt_sendbit>
+ 4ae:	02 c0       	rjmp	.+4      	; 0x4b4 <dt_sendbyte+0x32>
 	else //посылаем 0
 	dt_sendbit(0);
- 504:	80 e0       	ldi	r24, 0x00	; 0
- 506:	3a d0       	rcall	.+116    	; 0x57c <dt_sendbit>
+ 4b0:	80 e0       	ldi	r24, 0x00	; 0
+ 4b2:	54 d0       	rcall	.+168    	; 0x55c <dt_sendbit>
 }
 //========================================
 void dt_sendbyte(unsigned char bt)//функция записи байта на устройство
 {
 char i;
 for(i=0;i<8;i++)//посылаем отдельно каждый бит на устройство
- 508:	cf 5f       	subi	r28, 0xFF	; 255
- 50a:	c8 30       	cpi	r28, 0x08	; 8
- 50c:	48 f3       	brcs	.-46     	; 0x4e0 <dt_sendbyte+0xa>
+ 4b4:	cf 5f       	subi	r28, 0xFF	; 255
+ 4b6:	c8 30       	cpi	r28, 0x08	; 8
+ 4b8:	48 f3       	brcs	.-46     	; 0x48c <dt_sendbyte+0xa>
 	if((bt & (1<<i)) == 1<<i)//посылаем 1
 	dt_sendbit(1);
 	else //посылаем 0
 	dt_sendbit(0);
 }	
 }
- 50e:	df 91       	pop	r29
- 510:	cf 91       	pop	r28
- 512:	08 95       	ret
+ 4ba:	df 91       	pop	r29
+ 4bc:	cf 91       	pop	r28
+ 4be:	08 95       	ret
+
+Disassembly of section .text.ds18x2_sel:
+
+000005d2 <ds18x2_sel>:
+	//int identifi [8] = {0b00010000,0b00001110,0b10111110,0b00010110,0b00000010,0b00001000,0b00000000,0b00010110};
+	
+//====================================
+void ds18x2_sel(void){
+
+dt_sendbyte(MATCH_ROM);
+ 5d2:	85 e5       	ldi	r24, 0x55	; 85
+ 5d4:	56 df       	rcall	.-340    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x16);
+		dt_sendbyte(0xBE);
+		dt_sendbyte(0x0E);
+		dt_sendbyte(0x16);*/
+		
+		dt_sendbyte(0x8);
+ 5d6:	88 e0       	ldi	r24, 0x08	; 8
+ 5d8:	54 df       	rcall	.-344    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x0);
+ 5da:	80 e0       	ldi	r24, 0x00	; 0
+ 5dc:	52 df       	rcall	.-348    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x10);
+ 5de:	80 e1       	ldi	r24, 0x10	; 16
+ 5e0:	50 df       	rcall	.-352    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x40);
+ 5e2:	80 e4       	ldi	r24, 0x40	; 64
+ 5e4:	4e df       	rcall	.-356    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x68);
+ 5e6:	88 e6       	ldi	r24, 0x68	; 104
+ 5e8:	4c df       	rcall	.-360    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x7D);
+ 5ea:	8d e7       	ldi	r24, 0x7D	; 125
+ 5ec:	4a df       	rcall	.-364    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x70);
+ 5ee:	80 e7       	ldi	r24, 0x70	; 112
+ 5f0:	48 df       	rcall	.-368    	; 0x482 <dt_sendbyte>
+		dt_sendbyte(0x60);
+ 5f2:	80 e6       	ldi	r24, 0x60	; 96
+ 5f4:	46 df       	rcall	.-372    	; 0x482 <dt_sendbyte>
+ 5f6:	08 95       	ret
 
 Disassembly of section .text.dt_readbit:
 
-00000514 <dt_readbit>:
+000004c0 <dt_readbit>:
 char dt_readbit(void)//функция чтения бита с устройства
 {
 //char stektemp=SREG;// сохраним значение стека
 //cli(); //запрещаем прерывание
 char bt; //переменная хранения бита
 DDRTEMP |= 1<<BITTEMP; //притягиваем шину
- 514:	81 b3       	in	r24, 0x11	; 17
- 516:	80 62       	ori	r24, 0x20	; 32
- 518:	81 bb       	out	0x11, r24	; 17
- 51a:	25 e0       	ldi	r18, 0x05	; 5
- 51c:	2a 95       	dec	r18
- 51e:	f1 f7       	brne	.-4      	; 0x51c <dt_readbit+0x8>
- 520:	00 00       	nop
+ 4c0:	81 b3       	in	r24, 0x11	; 17
+ 4c2:	80 62       	ori	r24, 0x20	; 32
+ 4c4:	81 bb       	out	0x11, r24	; 17
+ 4c6:	25 e0       	ldi	r18, 0x05	; 5
+ 4c8:	2a 95       	dec	r18
+ 4ca:	f1 f7       	brne	.-4      	; 0x4c8 <dt_readbit+0x8>
+ 4cc:	00 00       	nop
 _delay_us(2); //задержка как минимум на 2 микросекунды
 DDRTEMP &= ~(1<<BITTEMP); //отпускаем шину
- 522:	81 b3       	in	r24, 0x11	; 17
- 524:	8f 7d       	andi	r24, 0xDF	; 223
- 526:	81 bb       	out	0x11, r24	; 17
- 528:	82 e2       	ldi	r24, 0x22	; 34
- 52a:	8a 95       	dec	r24
- 52c:	f1 f7       	brne	.-4      	; 0x52a <dt_readbit+0x16>
- 52e:	00 c0       	rjmp	.+0      	; 0x530 <dt_readbit+0x1c>
+ 4ce:	81 b3       	in	r24, 0x11	; 17
+ 4d0:	8f 7d       	andi	r24, 0xDF	; 223
+ 4d2:	81 bb       	out	0x11, r24	; 17
+ 4d4:	82 e2       	ldi	r24, 0x22	; 34
+ 4d6:	8a 95       	dec	r24
+ 4d8:	f1 f7       	brne	.-4      	; 0x4d6 <dt_readbit+0x16>
+ 4da:	00 c0       	rjmp	.+0      	; 0x4dc <dt_readbit+0x1c>
 _delay_us(13);
 bt = (PINTEMP & (1<<BITTEMP))>>BITTEMP; //читаем бит
- 530:	80 b3       	in	r24, 0x10	; 16
- 532:	80 72       	andi	r24, 0x20	; 32
- 534:	90 e0       	ldi	r25, 0x00	; 0
- 536:	95 95       	asr	r25
- 538:	87 95       	ror	r24
- 53a:	95 95       	asr	r25
- 53c:	87 95       	ror	r24
- 53e:	95 95       	asr	r25
- 540:	87 95       	ror	r24
- 542:	95 95       	asr	r25
- 544:	87 95       	ror	r24
- 546:	95 95       	asr	r25
- 548:	87 95       	ror	r24
- 54a:	28 e7       	ldi	r18, 0x78	; 120
- 54c:	2a 95       	dec	r18
- 54e:	f1 f7       	brne	.-4      	; 0x54c <dt_readbit+0x38>
+ 4dc:	80 b3       	in	r24, 0x10	; 16
+ 4de:	80 72       	andi	r24, 0x20	; 32
+ 4e0:	90 e0       	ldi	r25, 0x00	; 0
+ 4e2:	95 95       	asr	r25
+ 4e4:	87 95       	ror	r24
+ 4e6:	95 95       	asr	r25
+ 4e8:	87 95       	ror	r24
+ 4ea:	95 95       	asr	r25
+ 4ec:	87 95       	ror	r24
+ 4ee:	95 95       	asr	r25
+ 4f0:	87 95       	ror	r24
+ 4f2:	95 95       	asr	r25
+ 4f4:	87 95       	ror	r24
+ 4f6:	28 e7       	ldi	r18, 0x78	; 120
+ 4f8:	2a 95       	dec	r18
+ 4fa:	f1 f7       	brne	.-4      	; 0x4f8 <dt_readbit+0x38>
 _delay_us(45);
 //SREG = stektemp;// вернем значение стека
 return bt; //вернем результат	
 }
- 550:	08 95       	ret
+ 4fc:	08 95       	ret
 
 Disassembly of section .text.dt_readbyte:
 
-00000552 <dt_readbyte>:
+00000532 <dt_readbyte>:
 //========================================
 unsigned char dt_readbyte(void)//функция чтения байта с устройства
 {
- 552:	cf 93       	push	r28
- 554:	df 93       	push	r29
+ 532:	cf 93       	push	r28
+ 534:	df 93       	push	r29
 	char c=0;
 	char i;
 	for(i=0;i<8;i++)
- 556:	c0 e0       	ldi	r28, 0x00	; 0
+ 536:	c0 e0       	ldi	r28, 0x00	; 0
 return bt; //вернем результат	
 }
 //========================================
 unsigned char dt_readbyte(void)//функция чтения байта с устройства
 {
 	char c=0;
- 558:	d0 e0       	ldi	r29, 0x00	; 0
+ 538:	d0 e0       	ldi	r29, 0x00	; 0
 	char i;
 	for(i=0;i<8;i++)
- 55a:	0a c0       	rjmp	.+20     	; 0x570 <dt_readbyte+0x1e>
+ 53a:	0a c0       	rjmp	.+20     	; 0x550 <dt_readbyte+0x1e>
 	c|=dt_readbit()<<i; //читаем бит
- 55c:	db df       	rcall	.-74     	; 0x514 <dt_readbit>
- 55e:	90 e0       	ldi	r25, 0x00	; 0
- 560:	0c 2e       	mov	r0, r28
- 562:	02 c0       	rjmp	.+4      	; 0x568 <dt_readbyte+0x16>
- 564:	88 0f       	add	r24, r24
- 566:	99 1f       	adc	r25, r25
- 568:	0a 94       	dec	r0
- 56a:	e2 f7       	brpl	.-8      	; 0x564 <dt_readbyte+0x12>
- 56c:	d8 2b       	or	r29, r24
+ 53c:	c1 df       	rcall	.-126    	; 0x4c0 <dt_readbit>
+ 53e:	90 e0       	ldi	r25, 0x00	; 0
+ 540:	0c 2e       	mov	r0, r28
+ 542:	02 c0       	rjmp	.+4      	; 0x548 <dt_readbyte+0x16>
+ 544:	88 0f       	add	r24, r24
+ 546:	99 1f       	adc	r25, r25
+ 548:	0a 94       	dec	r0
+ 54a:	e2 f7       	brpl	.-8      	; 0x544 <dt_readbyte+0x12>
+ 54c:	d8 2b       	or	r29, r24
 //========================================
 unsigned char dt_readbyte(void)//функция чтения байта с устройства
 {
 	char c=0;
 	char i;
 	for(i=0;i<8;i++)
- 56e:	cf 5f       	subi	r28, 0xFF	; 255
- 570:	c8 30       	cpi	r28, 0x08	; 8
- 572:	a0 f3       	brcs	.-24     	; 0x55c <dt_readbyte+0xa>
+ 54e:	cf 5f       	subi	r28, 0xFF	; 255
+ 550:	c8 30       	cpi	r28, 0x08	; 8
+ 552:	a0 f3       	brcs	.-24     	; 0x53c <dt_readbyte+0xa>
 	c|=dt_readbit()<<i; //читаем бит
 	return c;
 }
- 574:	8d 2f       	mov	r24, r29
- 576:	df 91       	pop	r29
- 578:	cf 91       	pop	r28
- 57a:	08 95       	ret
+ 554:	8d 2f       	mov	r24, r29
+ 556:	df 91       	pop	r29
+ 558:	cf 91       	pop	r28
+ 55a:	08 95       	ret
 
 Disassembly of section .text.dt_check:
 
-00000440 <dt_check>:
+000004fe <dt_check>:
 //========================================
 int dt_check(void)//функция преобразования показаний датчика в температуру
 {
- 440:	cf 93       	push	r28
+ 4fe:	cf 93       	push	r28
 	
 	unsigned char bt;//переменная для считывания байта
 	unsigned int tt=0;
 	if(dt_testdevice()==1) //если устройство нашлось
- 442:	28 d0       	rcall	.+80     	; 0x494 <dt_testdevice>
- 444:	81 30       	cpi	r24, 0x01	; 1
- 446:	11 f5       	brne	.+68     	; 0x48c <dt_check+0x4c>
+ 500:	9f df       	rcall	.-194    	; 0x440 <dt_testdevice>
+ 502:	81 30       	cpi	r24, 0x01	; 1
+ 504:	91 f4       	brne	.+36     	; 0x52a <dt_check+0x2c>
 	{
-		dt_sendbyte(NOID);//CC пропустить идентификацию, тк у нас только одно устройство на шине
- 448:	8c ec       	ldi	r24, 0xCC	; 204
- 44a:	45 d0       	rcall	.+138    	; 0x4d6 <dt_sendbyte>
+ds18x2_sel();
+ 506:	65 d0       	rcall	.+202    	; 0x5d2 <ds18x2_sel>
+
+
+		
+		//dt_sendbyte(NOID);
 		dt_sendbyte(T_CONVERT);//44 измеряем температуру
- 44c:	84 e4       	ldi	r24, 0x44	; 68
- 44e:	43 d0       	rcall	.+134    	; 0x4d6 <dt_sendbyte>
+ 508:	84 e4       	ldi	r24, 0x44	; 68
+ 50a:	bb df       	rcall	.-138    	; 0x482 <dt_sendbyte>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 450:	8f ec       	ldi	r24, 0xCF	; 207
- 452:	97 e0       	ldi	r25, 0x07	; 7
- 454:	01 97       	sbiw	r24, 0x01	; 1
- 456:	f1 f7       	brne	.-4      	; 0x454 <dt_check+0x14>
- 458:	00 c0       	rjmp	.+0      	; 0x45a <dt_check+0x1a>
- 45a:	00 00       	nop
-		_delay_ms(1); //в 12битном режиме преобразования - 750 милисекунд
-		dt_testdevice(); //снова используем  те же манипуляции с шиной что и при проверке ее присутствия
- 45c:	1b d0       	rcall	.+54     	; 0x494 <dt_testdevice>
-		dt_sendbyte(NOID);//CC пропустить идентификацию, тк у нас только одно устройство на шине
- 45e:	8c ec       	ldi	r24, 0xCC	; 204
- 460:	3a d0       	rcall	.+116    	; 0x4d6 <dt_sendbyte>
+ 50c:	8f ec       	ldi	r24, 0xCF	; 207
+ 50e:	97 e0       	ldi	r25, 0x07	; 7
+ 510:	01 97       	sbiw	r24, 0x01	; 1
+ 512:	f1 f7       	brne	.-4      	; 0x510 <dt_check+0x12>
+ 514:	00 c0       	rjmp	.+0      	; 0x516 <dt_check+0x18>
+ 516:	00 00       	nop
+		_delay_ms(1);//в 12битном режиме преобразования - 750 милисекунд
+		dt_testdevice();//снова используем  те же манипуляции с шиной что и при проверке ее присутствия
+ 518:	93 df       	rcall	.-218    	; 0x440 <dt_testdevice>
+		//dt_sendbyte(NOID);//CC пропустить идентификацию, тк у нас только одно устройство на шине
+		//ds18x2_sel();
 		dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
- 462:	8e eb       	ldi	r24, 0xBE	; 190
- 464:	38 d0       	rcall	.+112    	; 0x4d6 <dt_sendbyte>
-		for (i=0;i<=7;i++){
-			dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
-		_delay_us(250);	
-		}*/
+ 51a:	8e eb       	ldi	r24, 0xBE	; 190
+ 51c:	b2 df       	rcall	.-156    	; 0x482 <dt_sendbyte>
+
 		
 		bt = dt_readbyte(); //читаем младший бит
- 466:	75 d0       	rcall	.+234    	; 0x552 <dt_readbyte>
- 468:	c8 2f       	mov	r28, r24
+ 51e:	09 d0       	rcall	.+18     	; 0x532 <dt_readbyte>
+ 520:	c8 2f       	mov	r28, r24
 		tt = dt_readbyte(); //читаем старший бит MS
- 46a:	73 d0       	rcall	.+230    	; 0x552 <dt_readbyte>
-		for (i=0;i<=6;i++){
- 46c:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <i>
- 470:	06 c0       	rjmp	.+12     	; 0x47e <dt_check+0x3e>
-			dt_readbyte();
- 472:	6f d0       	rcall	.+222    	; 0x552 <dt_readbyte>
-		_delay_us(250);	
-		}*/
-		
-		bt = dt_readbyte(); //читаем младший бит
-		tt = dt_readbyte(); //читаем старший бит MS
-		for (i=0;i<=6;i++){
- 474:	90 91 80 00 	lds	r25, 0x0080	; 0x800080 <i>
- 478:	9f 5f       	subi	r25, 0xFF	; 255
- 47a:	90 93 80 00 	sts	0x0080, r25	; 0x800080 <i>
- 47e:	90 91 80 00 	lds	r25, 0x0080	; 0x800080 <i>
- 482:	97 30       	cpi	r25, 0x07	; 7
- 484:	b0 f3       	brcs	.-20     	; 0x472 <dt_check+0x32>
-			dt_readbyte();
-		}
+ 522:	07 d0       	rcall	.+14     	; 0x532 <dt_readbyte>
+
 		tt = bt;//(tt<<8)|bt;//сдвигаем старший влево, младший пишем на его место, тем самым получаем общий результат
- 486:	8c 2f       	mov	r24, r28
- 488:	90 e0       	ldi	r25, 0x00	; 0
- 48a:	02 c0       	rjmp	.+4      	; 0x490 <dt_check+0x50>
+ 524:	8c 2f       	mov	r24, r28
+ 526:	90 e0       	ldi	r25, 0x00	; 0
+ 528:	02 c0       	rjmp	.+4      	; 0x52e <dt_check+0x30>
 //========================================
 int dt_check(void)//функция преобразования показаний датчика в температуру
 {
 	
 	unsigned char bt;//переменная для считывания байта
 	unsigned int tt=0;
- 48c:	80 e0       	ldi	r24, 0x00	; 0
- 48e:	90 e0       	ldi	r25, 0x00	; 0
-			dt_readbyte();
-		}
+ 52a:	80 e0       	ldi	r24, 0x00	; 0
+ 52c:	90 e0       	ldi	r25, 0x00	; 0
+		tt = dt_readbyte(); //читаем старший бит MS
+
 		tt = bt;//(tt<<8)|bt;//сдвигаем старший влево, младший пишем на его место, тем самым получаем общий результат
 	}
 	return tt;
 }
- 490:	cf 91       	pop	r28
- 492:	08 95       	ret
+ 52e:	cf 91       	pop	r28
+ 530:	08 95       	ret
 
 Disassembly of section .text.converttemp:
 
-00000644 <converttemp>:
+0000064a <converttemp>:
 //===========================================
 char converttemp (unsigned int tt)//преобразование температуры в единицы
 {
 	char t = tt/2;//>>3;//сдвиг и отсечение части старшего байта
- 644:	96 95       	lsr	r25
- 646:	87 95       	ror	r24
+ 64a:	96 95       	lsr	r25
+ 64c:	87 95       	ror	r24
 	//char t = tt;
 	return t;
- 648:	08 95       	ret
+ 64e:	08 95       	ret
 
 Disassembly of section .text.libgcc.div:
 
-00000618 <__udivmodqi4>:
- 618:	99 1b       	sub	r25, r25
- 61a:	79 e0       	ldi	r23, 0x09	; 9
- 61c:	04 c0       	rjmp	.+8      	; 0x626 <__udivmodqi4_ep>
+0000061e <__udivmodqi4>:
+ 61e:	99 1b       	sub	r25, r25
+ 620:	79 e0       	ldi	r23, 0x09	; 9
+ 622:	04 c0       	rjmp	.+8      	; 0x62c <__udivmodqi4_ep>
 
-0000061e <__udivmodqi4_loop>:
- 61e:	99 1f       	adc	r25, r25
- 620:	96 17       	cp	r25, r22
- 622:	08 f0       	brcs	.+2      	; 0x626 <__udivmodqi4_ep>
- 624:	96 1b       	sub	r25, r22
+00000624 <__udivmodqi4_loop>:
+ 624:	99 1f       	adc	r25, r25
+ 626:	96 17       	cp	r25, r22
+ 628:	08 f0       	brcs	.+2      	; 0x62c <__udivmodqi4_ep>
+ 62a:	96 1b       	sub	r25, r22
 
-00000626 <__udivmodqi4_ep>:
- 626:	88 1f       	adc	r24, r24
- 628:	7a 95       	dec	r23
- 62a:	c9 f7       	brne	.-14     	; 0x61e <__udivmodqi4_loop>
- 62c:	80 95       	com	r24
- 62e:	08 95       	ret
-
-Disassembly of section .text.libgcc.div:
-
-000005f2 <__divmodhi4>:
- 5f2:	97 fb       	bst	r25, 7
- 5f4:	07 2e       	mov	r0, r23
- 5f6:	16 f4       	brtc	.+4      	; 0x5fc <__divmodhi4+0xa>
- 5f8:	00 94       	com	r0
- 5fa:	06 d0       	rcall	.+12     	; 0x608 <__divmodhi4_neg1>
- 5fc:	77 fd       	sbrc	r23, 7
- 5fe:	08 d0       	rcall	.+16     	; 0x610 <__divmodhi4_neg2>
- 600:	d1 df       	rcall	.-94     	; 0x5a4 <__udivmodhi4>
- 602:	07 fc       	sbrc	r0, 7
- 604:	05 d0       	rcall	.+10     	; 0x610 <__divmodhi4_neg2>
- 606:	3e f4       	brtc	.+14     	; 0x616 <__divmodhi4_exit>
-
-00000608 <__divmodhi4_neg1>:
- 608:	90 95       	com	r25
- 60a:	81 95       	neg	r24
- 60c:	9f 4f       	sbci	r25, 0xFF	; 255
- 60e:	08 95       	ret
-
-00000610 <__divmodhi4_neg2>:
- 610:	70 95       	com	r23
- 612:	61 95       	neg	r22
- 614:	7f 4f       	sbci	r23, 0xFF	; 255
-
-00000616 <__divmodhi4_exit>:
- 616:	08 95       	ret
+0000062c <__udivmodqi4_ep>:
+ 62c:	88 1f       	adc	r24, r24
+ 62e:	7a 95       	dec	r23
+ 630:	c9 f7       	brne	.-14     	; 0x624 <__udivmodqi4_loop>
+ 632:	80 95       	com	r24
+ 634:	08 95       	ret
 
 Disassembly of section .text.libgcc.div:
 
-000005a4 <__udivmodhi4>:
- 5a4:	aa 1b       	sub	r26, r26
- 5a6:	bb 1b       	sub	r27, r27
- 5a8:	51 e1       	ldi	r21, 0x11	; 17
- 5aa:	07 c0       	rjmp	.+14     	; 0x5ba <__udivmodhi4_ep>
+000005f8 <__divmodhi4>:
+ 5f8:	97 fb       	bst	r25, 7
+ 5fa:	07 2e       	mov	r0, r23
+ 5fc:	16 f4       	brtc	.+4      	; 0x602 <__divmodhi4+0xa>
+ 5fe:	00 94       	com	r0
+ 600:	06 d0       	rcall	.+12     	; 0x60e <__divmodhi4_neg1>
+ 602:	77 fd       	sbrc	r23, 7
+ 604:	08 d0       	rcall	.+16     	; 0x616 <__divmodhi4_neg2>
+ 606:	be df       	rcall	.-132    	; 0x584 <__udivmodhi4>
+ 608:	07 fc       	sbrc	r0, 7
+ 60a:	05 d0       	rcall	.+10     	; 0x616 <__divmodhi4_neg2>
+ 60c:	3e f4       	brtc	.+14     	; 0x61c <__divmodhi4_exit>
 
-000005ac <__udivmodhi4_loop>:
- 5ac:	aa 1f       	adc	r26, r26
- 5ae:	bb 1f       	adc	r27, r27
- 5b0:	a6 17       	cp	r26, r22
- 5b2:	b7 07       	cpc	r27, r23
- 5b4:	10 f0       	brcs	.+4      	; 0x5ba <__udivmodhi4_ep>
- 5b6:	a6 1b       	sub	r26, r22
- 5b8:	b7 0b       	sbc	r27, r23
+0000060e <__divmodhi4_neg1>:
+ 60e:	90 95       	com	r25
+ 610:	81 95       	neg	r24
+ 612:	9f 4f       	sbci	r25, 0xFF	; 255
+ 614:	08 95       	ret
 
-000005ba <__udivmodhi4_ep>:
- 5ba:	88 1f       	adc	r24, r24
- 5bc:	99 1f       	adc	r25, r25
- 5be:	5a 95       	dec	r21
- 5c0:	a9 f7       	brne	.-22     	; 0x5ac <__udivmodhi4_loop>
- 5c2:	80 95       	com	r24
- 5c4:	90 95       	com	r25
- 5c6:	bc 01       	movw	r22, r24
- 5c8:	cd 01       	movw	r24, r26
- 5ca:	08 95       	ret
+00000616 <__divmodhi4_neg2>:
+ 616:	70 95       	com	r23
+ 618:	61 95       	neg	r22
+ 61a:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000061c <__divmodhi4_exit>:
+ 61c:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+00000584 <__udivmodhi4>:
+ 584:	aa 1b       	sub	r26, r26
+ 586:	bb 1b       	sub	r27, r27
+ 588:	51 e1       	ldi	r21, 0x11	; 17
+ 58a:	07 c0       	rjmp	.+14     	; 0x59a <__udivmodhi4_ep>
+
+0000058c <__udivmodhi4_loop>:
+ 58c:	aa 1f       	adc	r26, r26
+ 58e:	bb 1f       	adc	r27, r27
+ 590:	a6 17       	cp	r26, r22
+ 592:	b7 07       	cpc	r27, r23
+ 594:	10 f0       	brcs	.+4      	; 0x59a <__udivmodhi4_ep>
+ 596:	a6 1b       	sub	r26, r22
+ 598:	b7 0b       	sbc	r27, r23
+
+0000059a <__udivmodhi4_ep>:
+ 59a:	88 1f       	adc	r24, r24
+ 59c:	99 1f       	adc	r25, r25
+ 59e:	5a 95       	dec	r21
+ 5a0:	a9 f7       	brne	.-22     	; 0x58c <__udivmodhi4_loop>
+ 5a2:	80 95       	com	r24
+ 5a4:	90 95       	com	r25
+ 5a6:	bc 01       	movw	r22, r24
+ 5a8:	cd 01       	movw	r24, r26
+ 5aa:	08 95       	ret
