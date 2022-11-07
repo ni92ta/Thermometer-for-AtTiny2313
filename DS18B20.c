@@ -24,23 +24,23 @@ dt_sendbyte(MATCH_ROM);
 		//dt_sendbyte(MATCH_ROM);
 		
 
-        /*dt_sendbyte(0x10);	
+        dt_sendbyte(0x10);	
 		dt_sendbyte(0x0);
 		dt_sendbyte(0x08);
 		dt_sendbyte(0x02);
-		dt_sendbyte(0x16);
+		dt_sendbyte(0x57);
 		dt_sendbyte(0xBE);
-		dt_sendbyte(0x0E);
-		dt_sendbyte(0x16);*/
+		dt_sendbyte(0x4E);
+		dt_sendbyte(0x17);
 		
-		dt_sendbyte(0x8);
+		/*dt_sendbyte(0x8);
 		dt_sendbyte(0x0);
 		dt_sendbyte(0x10);
 		dt_sendbyte(0x40);
 		dt_sendbyte(0x68);
 		dt_sendbyte(0x7D);
 		dt_sendbyte(0x70);
-		dt_sendbyte(0x60);
+		dt_sendbyte(0x60);*/
 		
 		/*
 		dt_sendbyte(0x10);
@@ -132,17 +132,23 @@ int dt_check(void)//функция преобразования показани
 	if(dt_testdevice()==1) //если устройство нашлось
 	{
 ds18x2_sel();
+dt_sendbyte(READ_DATA);
+for(i=0;i<8;i++){
+	bt = dt_readbyte();
+}
 
 
 		
 		//dt_sendbyte(NOID);
-		dt_sendbyte(T_CONVERT);//44 измеряем температуру
+		//dt_sendbyte(T_CONVERT);//44 измеряем температуру
 		_delay_ms(1);//в 12битном режиме преобразования - 750 милисекунд
 		dt_testdevice();//снова используем  те же манипуляции с шиной что и при проверке ее присутствия
 		dt_sendbyte(NOID);//CC пропустить идентификацию, тк у нас только одно устройство на шине
-		ds18x2_sel();
+		//ds18x2_sel();
+		//dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
+dt_sendbyte(T_CONVERT);//44 измеряем температуру
 		dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
-
+		
 		
 		bt = dt_readbyte(); //читаем младший бит
 		tt = dt_readbyte(); //читаем старший бит MS
@@ -158,3 +164,12 @@ char converttemp (unsigned int tt)//преобразование темпера�
 	//char t = tt;
 	return t;
 }
+
+
+/*
+dt_sendbyte(READ_ROM);
+for(i=0;i<8;i++){
+	bt = dt_readbyte();
+}
+*/
+
