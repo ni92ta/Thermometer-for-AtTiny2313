@@ -17,19 +17,20 @@ int identifi [8] = {0b00001000,0b01110000,0b01111101,0b01101000,0b01000000,0b000
 	//int identifi [8] = {0b00010000,0b00001110,0b10111110,0b00010110,0b00000010,0b00001000,0b00000000,0b00010110};
 	
 //====================================
-void ds18x2_sel(void){
-
+void ds18x2_sel(unsigned char dat){
 dt_sendbyte(MATCH_ROM);
+if (dat==1){
 //-------DS1820---------------
-		/*dt_sendbyte(0x10);
+		dt_sendbyte(0x10);
 		dt_sendbyte(0x4E);
 		dt_sendbyte(0xBE);
 		dt_sendbyte(0x57);
 		dt_sendbyte(0x02);
 		dt_sendbyte(0x08);
 		dt_sendbyte(0x0);
-		dt_sendbyte(0x17);*/
-		
+		dt_sendbyte(0x17);
+		}
+else{		
 //-------DS18B20---------------					
 	    dt_sendbyte(0x28);			
 		dt_sendbyte(0x44);
@@ -39,7 +40,7 @@ dt_sendbyte(MATCH_ROM);
 		dt_sendbyte(0x00);
 		dt_sendbyte(0x00);
 		dt_sendbyte(0xCB);	
-				
+	    }			
 }
 char dt_testdevice(void) //dt - digital termomether | определим, есть ли устройство на шине
 {
@@ -118,7 +119,7 @@ int dt_check(void)//функция преобразования показани
 	unsigned int tt=0;
 	if(dt_testdevice()==1) //если устройство нашлось
 	{
-ds18x2_sel();
+ds18x2_sel(1);
 /* Чтение ROM
 dt_sendbyte(READ_ROM);
 for(i=0;i<8;i++){
