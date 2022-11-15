@@ -20,40 +20,26 @@ int identifi [8] = {0b00001000,0b01110000,0b01111101,0b01101000,0b01000000,0b000
 void ds18x2_sel(void){
 
 dt_sendbyte(MATCH_ROM);
-//unsigned char o;
-//for (o=0;o<8;o++){
-		//dt_sendbyte(MATCH_ROM);
-		
-
-       /* dt_sendbyte(0x10);	
-		dt_sendbyte(0x0);
-		dt_sendbyte(0x08);
-		dt_sendbyte(0x02);
-		dt_sendbyte(0x57);
-		dt_sendbyte(0xBE);
+//-------DS1820---------------
+		/*dt_sendbyte(0x10);
 		dt_sendbyte(0x4E);
+		dt_sendbyte(0xBE);
+		dt_sendbyte(0x57);
+		dt_sendbyte(0x02);
+		dt_sendbyte(0x08);
+		dt_sendbyte(0x0);
 		dt_sendbyte(0x17);*/
 		
-		/*dt_sendbyte(0x8);
-		dt_sendbyte(0x0);
-		dt_sendbyte(0x10);
-		dt_sendbyte(0x40);
-		dt_sendbyte(0x68);
-		dt_sendbyte(0x7D);
-		dt_sendbyte(0x70);
-		dt_sendbyte(0x60);*/
-		
-		
-		dt_sendbyte(0x10);
-		dt_sendbyte(0x4E);
-		dt_sendbyte(0xBE);//+
-		dt_sendbyte(0x57);
-		dt_sendbyte(0x02);
-		dt_sendbyte(0x08);
-		dt_sendbyte(0x0);
-		dt_sendbyte(0x17);	
-//}
-	
+//-------DS18B20---------------					
+	    dt_sendbyte(0x28);			
+		dt_sendbyte(0x44);
+		dt_sendbyte(0xD1);
+		dt_sendbyte(0xE9);
+		dt_sendbyte(0x05);
+		dt_sendbyte(0x00);
+		dt_sendbyte(0x00);
+		dt_sendbyte(0xCB);	
+				
 }
 char dt_testdevice(void) //dt - digital termomether | определим, есть ли устройство на шине
 {
@@ -133,22 +119,12 @@ int dt_check(void)//функция преобразования показани
 	if(dt_testdevice()==1) //если устройство нашлось
 	{
 ds18x2_sel();
-//dt_sendbyte(READ_DATA);
-//for(i=0;i<9;i++){
-	//btt = dt_readbyte();
-//}
-
-
+/* Чтение ROM
+dt_sendbyte(READ_ROM);
+for(i=0;i<8;i++){
+	bt = dt_readbyte();
+}*/
 		
-		//dt_sendbyte(NOID);
-		//dt_sendbyte(T_CONVERT);//44 измеряем температуру
-		//_delay_ms(1);//в 12битном режиме преобразования - 750 милисекунд
-		//dt_testdevice();//снова используем  те же манипуляции с шиной что и при проверке ее присутствия
-		//dt_sendbyte(NOID);//CC пропустить идентификацию, тк у нас только одно устройство на шине
-		//ds18x2_sel();
-		//dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
-//dt_sendbyte(T_CONVERT);//44 измеряем температуру
-//_delay_ms(1);//в 12битном режиме преобразования - 750 милисекунд
 		dt_sendbyte(READ_DATA); //даем команду на чтение данных с устройства
 		
 		
@@ -168,15 +144,6 @@ ds18x2_sel();
 char converttemp (unsigned int tt)//преобразование температуры в единицы
 {
 	char t = tt/2;//>>3;//сдвиг и отсечение части старшего байта
-	//char t = tt;
 	return t;
 }
-
-
-/*
-dt_sendbyte(READ_ROM);
-for(i=0;i<8;i++){
-	bt = dt_readbyte();
-}
-*/
 
