@@ -96,10 +96,7 @@ void fraim_out (int kll){
 		start_run_fraim=0;
 		start_tim = 1;
 		 time_tim=0;
-		// t = converttemp(dt_check()); //измеряем температуру
 	}
-
-	
 			//ttt = ((t>>1)*7+((t%10)));//((t>>1)*7+((t%10)));
 			ttt = t;///2;
 			unsigned char ch = (ttt%10);//единицы
@@ -116,7 +113,6 @@ void fraim_out (int kll){
 
 	start_run_fraim++;
  if (start_run_fraim<=20) {
-//t = converttemp(dt_check()); //измеряем температуру
 	 buf[9] = eff1[1]; // Считали 1ю колонку в буфер
 	 for (int v = 1; v<=10; v++)
 	 {
@@ -184,7 +180,7 @@ void fraim_out (int kll){
 						 eff1[9] = aa;//0
 																 break;
 								 case 60://(60 || 70 || 80 || 90 ||100) :
-								 t = converttemp(dt_check()); //измеряем температуру
+								// t = converttemp(dt_check(2)); //измеряем температуру
 								 eff1[1] = 0b00000000;//0 
 							 eff1[2] = 0b00000000;//0
 							  eff1[3] = 0b00000000;//0
@@ -242,7 +238,7 @@ void fraim_out (int kll){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
-			t = converttemp(dt_check()); //измеряем температуру
+			t = converttemp(dt_check(1)); //измеряем температуру
 					 		                            if (start_run_fraim>=20){
 														  eff1[2] = cc;//2
 					 		                             eff1[3] = bb;//2
