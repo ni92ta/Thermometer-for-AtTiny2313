@@ -33,7 +33,7 @@ unsigned char aa;
 unsigned char bb;
 unsigned char cc;
 unsigned char vpo;
-//unsigned int tt=0;
+unsigned int ttci;
 //----------------------------------------------------
 int efi[12] = {0b01111110,0b00110000,0b01101101,0b01111001,0b00110011,0b01011011,0b01011111,0b01110000,0b01111111,0b01111011,0b01001110,0b00000000
 };//0,1,2,3,4,5,6,7,8,9,С,NULL
@@ -92,10 +92,10 @@ time_tim++;
 //-------------Вывод фрейма---------------------------
 void fraim_out (int kll){
 							
-	if (time_tim==40){
+	if (time_tim==50){//задаём время до начала бегущей строки 40~20сек 
 		start_run_fraim=0;
 		start_tim = 1;
-		 time_tim=0;
+		 time_tim=0;	 
 	}
 			//ttt = ((t>>1)*7+((t%10)));//((t>>1)*7+((t%10)));
 			ttt = t;///2;
@@ -112,7 +112,7 @@ void fraim_out (int kll){
 			}
 
 	start_run_fraim++;
- if (start_run_fraim<=20) {
+ if (start_run_fraim<=10) {//количество проходов бегущей строки 20~2раза
 	 buf[9] = eff1[1]; // Считали 1ю колонку в буфер
 	 for (int v = 1; v<=10; v++)
 	 {
@@ -180,7 +180,7 @@ void fraim_out (int kll){
 						 eff1[9] = aa;//0
 																 break;
 								 case 60://(60 || 70 || 80 || 90 ||100) :
-								// t = converttemp(dt_check(2)); //измеряем температуру
+								 t = converttemp(dt_check(kll)); //измеряем температуру
 								 eff1[1] = 0b00000000;//0 
 							 eff1[2] = 0b00000000;//0
 							  eff1[3] = 0b00000000;//0
@@ -238,7 +238,7 @@ void fraim_out (int kll){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
-			t = converttemp(dt_check(1)); //измеряем температуру
+			t = converttemp(dt_check(kll)); //измеряем температуру
 					 		                            if (start_run_fraim>=20){
 														  eff1[2] = cc;//2
 					 		                             eff1[3] = bb;//2
@@ -264,8 +264,9 @@ int main(void)
 	DDRD = 0b01001111;// определяем выходы мк (1 выход; 0 вход);
     while(1)
     {	
-		fraim_out(t);
-		//t = converttemp(dt_check()); //измеряем температуру
+		
+		fraim_out(1);
+		
 	}
 }
 //PORTB |= 0x10;//установка бита
