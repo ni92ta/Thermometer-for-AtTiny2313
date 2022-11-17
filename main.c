@@ -33,6 +33,8 @@ unsigned char aa;
 unsigned char bb;
 unsigned char cc;
 unsigned char vpo;
+unsigned char klll;
+unsigned char kll;
 unsigned int ttci;
 //----------------------------------------------------
 int efi[12] = {0b01111110,0b00110000,0b01101101,0b01111001,0b00110011,0b01011011,0b01011111,0b01110000,0b01111111,0b01111011,0b01001110,0b00000000
@@ -90,15 +92,18 @@ time_tim++;
 	 TCCR0B = 0b00000000;//останавливаем таймер
  }
 //-------------Вывод фрейма---------------------------
-void fraim_out (int kll){
+void fraim_out (void){
 							
-	if (time_tim==50){//задаём время до начала бегущей строки 40~20сек 
+	if (time_tim==20){//задаём время до начала бегущей строки 40~20сек 
 		start_run_fraim=0;
 		start_tim = 1;
-		 time_tim=0;	 
+		 time_tim=0;
+		// kll=2;	 
 	}
 			//ttt = ((t>>1)*7+((t%10)));//((t>>1)*7+((t%10)));
+			t = converttemp(dt_check(1)); //измеряем температуру
 			ttt = t;///2;
+			
 			unsigned char ch = (ttt%10);//единицы
 			unsigned char chh = ttt%100/10;//десятки
 			unsigned char chhh = ttt%1000/100;//сотни
@@ -116,6 +121,7 @@ void fraim_out (int kll){
 	 buf[9] = eff1[1]; // Считали 1ю колонку в буфер
 	 for (int v = 1; v<=10; v++)
 	 {
+		 //kll=2;
 		 vpo ++;
 		 eff1[v] = eff1[v+1]; // Сдвинули матрицу на один столбец влево
 		
@@ -180,7 +186,23 @@ void fraim_out (int kll){
 						 eff1[9] = aa;//0
 																 break;
 								 case 60://(60 || 70 || 80 || 90 ||100) :
-								 t = converttemp(dt_check(kll)); //измеряем температуру
+								/* klll++;
+									t = converttemp(dt_check(klll)); //измеряем температуру
+									 ttt = t;///2;
+									 
+									 unsigned char ch = (ttt%10);//единицы
+									 unsigned char chh = ttt%100/10;//десятки
+									 unsigned char chhh = ttt%1000/100;//сотни
+									 aa = efi[ch];
+									 bb = efi[chh];
+									 if (chhh == 0){//убираем первый разряд (ноль)
+										 cc = efi[12];
+									 }
+									 else{
+										 cc = efi[chhh];
+									 } 
+								if (klll==3) klll=1; */
+											 
 								 eff1[1] = 0b00000000;//0 
 							 eff1[2] = 0b00000000;//0
 							  eff1[3] = 0b00000000;//0
@@ -192,6 +214,25 @@ void fraim_out (int kll){
 							//eff1[9] = 0b00000000;//0
 												 break;
 									 case 110:
+					
+												/*	 klll=2;
+													 if (klll==3) klll=0;
+													 t = converttemp(dt_check(2)); //измеряем температуру
+													 ttt = t;///2;
+													 
+													 unsigned char ch = (ttt%10);//единицы
+													 unsigned char chh = ttt%100/10;//десятки
+													 unsigned char chhh = ttt%1000/100;//сотни
+													 aa = efi[ch];
+													 bb = efi[chh];
+													 if (chhh == 0){//убираем первый разряд (ноль)
+														 cc = efi[12];
+													 }
+													 else{
+														 cc = efi[chhh];
+													 }*/
+													 	 
+									 
 			  eff1[1] = 0;//0
 			  eff1[2] = cc;//1
 			  eff1[3] = bb;//2
@@ -238,7 +279,7 @@ void fraim_out (int kll){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
-			t = converttemp(dt_check(kll)); //измеряем температуру
+			//t = converttemp(dt_check(klll)); //измеряем температуру
 					 		                            if (start_run_fraim>=20){
 														  eff1[2] = cc;//2
 					 		                             eff1[3] = bb;//2
@@ -264,257 +305,12 @@ int main(void)
 	DDRD = 0b01001111;// определяем выходы мк (1 выход; 0 вход);
     while(1)
     {	
-		
-		fraim_out(1);
+
+		fraim_out();
+
 		
 	}
 }
 //PORTB |= 0x10;//установка бита
 //PORTB &= ~0x1;//сброс бита
 
-/*
-
- }
- //-------------Вывод фрейма---------------------------
- void fraim_out (int kll){
-	 
-	 if (v==40){
-		 g=8;
-		 v=0;
-	 }
-	 g++;
-	 if (g<45) {
-		 buf[9] = eff1[1]; // Считали 1ю колонку в буфер
-		 for (int v = 1; v<=10; v++)
-		 {
-			 eff1[v] = eff1[v+1]; // Сдвинули матрицу на один столбец влево
-		 }
-		 eff1[9] = buf[9]; // Записали содержимое буфера (первую колонку) в конец матрицы
-	 }
-	 for (int i = 0; i < 300; ++i) {
-		 PORTB = eff1[l];
-		 _delay_ms(1);
-		 switch (l){
-			 case 0:
-			 PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			 break;
-			 case 1:
-			 PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			 PORTD &= ~(1<<2);
-			 break;
-			 case 2:
-			 PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			 PORTD &= ~(1<<1);
-			 break;
-			 case 3:
-			 PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			 PORTD &= ~(1<<0);
-			 break;
-			 case 4:
-			 PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			 PORTD &= ~(1<<3);
-			 break;
-			 case 5:
-			 PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			 break;
-		 }
-		 l++;
-		 y++;
-		 if (y == 9) {
-			 y = 0;
-			 l -= 9;
-			 t = converttemp(dt_check()); //измеряем температуру
-			 ttt = ((t>>1)*10+((t%2)*5));
-			 unsigned char ch = (ttt%10);//единицы
-			 unsigned char chh = ttt%100/10;//десятки
-			 unsigned char chhh = ttt%1000/100;//сотни
-			 aa = efi[ch];
-			 bb = efi[chh];
-			 if (chhh == 0){//убираем первый разряд (ноль)
-				 cc = efi[12];
-			 }
-			 else{
-				 cc = efi[chhh];
-			 }
-			 
-		 }
-	 }
-	 if (g>=45){
-		 TIMSK |= (1<<OCIE0A);//устанавливаем бит разрешения прерывания таймера по совпадению
-		 TCCR0B |= (1<<CS02) | (1<<CS00);
-		 TCNT0 = 0b00000000;//обнуляем таймер
-		 eff1[4] = aa;//единицы
-		 eff1[3] = bb;//десятки
-		 eff1[2] = cc;//сотни
-		 eff1[5] = 0b01001110;// Градус цельсия
-	 }
- }
-
-*/
-
-
-
-/*
-void fraim_out (int kll){						
-	if (vvvv==40){
-		//g=8;
-		//e=1;
-	}
-	if (g>=0) {
-			//g++;
-		//if (g<=45){
-			//g++;
-			buf[9] = eff1[1]; // Считали 1ю колонку в буфер
-			for (int vo=1; vo<=10; vo++)
-			{
-				eff1[vo] = eff1[vo+1]; // Сдвинули матрицу на один столбец влево
-			}
-			eff1[9] = buf[9]; // Записали содержимое буфера (первую колонку) в конец матрицы
-			//}
-	}
-			//	if (g>=45) {
-				//	g = 0;
-				//	e=0;
-				//	vvvv=0;
-				//}
-	for (int i = 0; i < 300; ++i) {
-		PORTB = eff1[l];
-		_delay_ms(1);
-		switch (l){
-			case 0:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			break;
-			case 1:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<2);
-			break;
-			case 2:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<1);
-			break;
-			case 3:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<0);
-			break;
-			case 4:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<3);
-			break;
-						case 5:
-						PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-						break;
-							}
-		l++;
-		y++;
-		if (y == 9) {
-			y = 0;
-			l -= 9;
-			t = converttemp(dt_check()); //измеряем температуру
-			ttt = ((t>>1)*10+((t%10)));//5));
-			unsigned char ch = (ttt%10);//единицы
-			unsigned char chh = ttt%100/10;//десятки
-			unsigned char chhh = ttt%1000/100;//сотни
-			aa = efi[ch];
-			bb = efi[chh];
-			if (chhh == 0){//убираем первый разряд (ноль)
-				cc = efi[12];
-			}
-			else{
-				cc = efi[chhh];
-			}
-	
-		}		
-	}
-if (e==0){
-		//TIMSK |= (1<<OCIE0A);//устанавливаем бит разрешения прерывания таймера по совпадению
-		//TCCR0B |= (1<<CS02) | (1<<CS00);
-		//TCNT0 = 0b00000000;//обнуляем таймер
-										eff1[4] = aa;//единицы
-										eff1[3] = bb;//десятки
-										eff1[2] = cc;//сотни
-										eff1[5] = 0b01001110;// Градус цельсия
-}
-}
-
-*/
-
-/*
-
-void fraim_out (int kll){						
-	if (vvvv==40){
-		//g=8;
-		//e=1;
-	}
- if (g<45) {
-	 buf[9] = eff1[1]; // Считали 1ю колонку в буфер
-	 for (int v = 1; v<=10; v++)
-	 {
-		 eff1[v] = eff1[v+1]; // Сдвинули матрицу на один столбец влево
-	 }
-	 eff1[9] = buf[9]; // Записали содержимое буфера (первую колонку) в конец матрицы
- }
-			//	if (g>=45) {
-				//	g = 0;
-				//	e=0;
-				//	vvvv=0;
-				//}
-	for (int i = 0; i < 300; ++i) {
-		PORTB = eff1[l];
-		_delay_ms(1);
-		switch (l){
-			case 0:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			break;
-			case 1:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<2);
-			break;
-			case 2:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<1);
-			break;
-			case 3:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<0);
-			break;
-			case 4:
-			PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-			PORTD &= ~(1<<3);
-			break;
-						case 5:
-						PORTD |= (1<<3) | (1<<2) | (1<<1) | (1<<0);
-						break;
-							}
-		l++;
-		y++;
-		if (y == 9) {
-			y = 0;
-			l -= 9;
-			t = converttemp(dt_check()); //измеряем температуру
-			ttt = ((t>>1)*7+((t%10)));/5));
-			unsigned char ch = (ttt%10);//единицы
-			unsigned char chh = ttt%100/10;//десятки
-			unsigned char chhh = ttt%1000/100;//сотни
-			aa = efi[ch];
-			bb = efi[chh];
-			if (chhh == 0){//убираем первый разряд (ноль)
-				cc = efi[12];
-			}
-			else{
-				cc = efi[chhh];
-			}
-	
-		}		
-	}
-if (e==0){
-		//TIMSK |= (1<<OCIE0A);//устанавливаем бит разрешения прерывания таймера по совпадению
-		//TCCR0B |= (1<<CS02) | (1<<CS00);
-		//TCNT0 = 0b00000000;//обнуляем таймер
-										eff1[4] = aa;//единицы
-										eff1[3] = bb;//десятки
-										eff1[2] = cc;//сотни
-										eff1[5] = 0b01001110;// Градус цельсия
-}
-}
-
-*/
