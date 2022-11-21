@@ -27,7 +27,8 @@ int y;
 //int vvvv;
 //unsigned char fraim;
 //char dtt;
-unsigned char t;
+unsigned char t;//Датчик внутренний
+unsigned char t2;//Датчик внешний
 unsigned char ttt;
 unsigned char aa;
 unsigned char bb;
@@ -101,8 +102,8 @@ void fraim_out (void){
 		// kll=2;	 
 	}
 			//ttt = ((t>>1)*7+((t%10)));//((t>>1)*7+((t%10)));
-			t = converttemp(dt_check(1)); //измеряем температуру
-			ttt = t;///2;
+		//	t = converttemp(dt_check(1)); //измеряем температуру
+			ttt = t2;///2;
 			
 			unsigned char ch = (ttt%10);//единицы
 			unsigned char chh = ttt%100/10;//десятки
@@ -175,6 +176,22 @@ void fraim_out (void){
 						 eff1[9] = bb;//0
 									   			 break;
 						 case 50:
+						 								/*	t2 = converttemp(dt_check(2)); //измеряем температуру
+						 									
+						 									ttt = t2;///2;
+						 									
+						 									unsigned char ch = (ttt%10);//единицы
+						 									unsigned char chh = ttt%100/10;//десятки
+						 									unsigned char chhh = ttt%1000/100;//сотни
+						 									aa = efi[ch];
+						 									bb = efi[chh];
+						 									if (chhh == 0){//убираем первый разряд (ноль)
+							 									cc = efi[12];
+						 									}
+						 									else{
+							 									cc = efi[chhh];
+						 									}*/
+						 
 						 eff1[1] = 0b01001110;//0
 						 eff1[2] = 0;//2
 						 eff1[3] = 0;//3
@@ -202,6 +219,7 @@ void fraim_out (void){
 										 cc = efi[chhh];
 									 } 
 								if (klll==3) klll=1; */
+
 											 
 								 eff1[1] = 0b00000000;//0 
 							 eff1[2] = 0b00000000;//0
@@ -217,20 +235,8 @@ void fraim_out (void){
 					
 												/*	 klll=2;
 													 if (klll==3) klll=0;
-													 t = converttemp(dt_check(2)); //измеряем температуру
-													 ttt = t;///2;
-													 
-													 unsigned char ch = (ttt%10);//единицы
-													 unsigned char chh = ttt%100/10;//десятки
-													 unsigned char chhh = ttt%1000/100;//сотни
-													 aa = efi[ch];
-													 bb = efi[chh];
-													 if (chhh == 0){//убираем первый разряд (ноль)
-														 cc = efi[12];
-													 }
-													 else{
-														 cc = efi[chhh];
-													 }*/
+													 t = converttemp(dt_check(2)); //измеряем температуру*/
+
 													 	 
 									 
 			  eff1[1] = 0;//0
@@ -279,7 +285,7 @@ void fraim_out (void){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
-			//t = converttemp(dt_check(klll)); //измеряем температуру
+			t2 = converttemp(dt_check(2)); //измеряем температуру
 					 		                            if (start_run_fraim>=20){
 														  eff1[2] = cc;//2
 					 		                             eff1[3] = bb;//2
