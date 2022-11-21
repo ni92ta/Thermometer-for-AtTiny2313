@@ -18,10 +18,10 @@ int identifi [8] = {0b00001000,0b01110000,0b01111101,0b01101000,0b01000000,0b000
 	//int identifi [8] = {0b00010000,0b00001110,0b10111110,0b00010110,0b00000010,0b00001000,0b00000000,0b00010110};
 	
 //====================================
-void ds18x2_sel(unsigned char dat){
+void ds18x2_sel(unsigned char dat){//отправляем ROM адрес датчика
 dt_sendbyte(MATCH_ROM);
 if (dat==1){
-//-------DS1820---------------
+//-------Датчик внутренний DS1820---------------
 		dt_sendbyte(0x10);
 		dt_sendbyte(0x4E);
 		dt_sendbyte(0xBE);
@@ -32,7 +32,7 @@ if (dat==1){
 		dt_sendbyte(0x17);
 		}
 if (dat==2){	
-//-------DS18B20---------------					
+//-------Датчик внешний DS18B20---------------					
 	    dt_sendbyte(0x28);			
 		dt_sendbyte(0x44);
 		dt_sendbyte(0xD1);
