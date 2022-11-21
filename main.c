@@ -102,9 +102,9 @@ void fraim_out (void){
 		// kll=2;	 
 	}
 			//ttt = ((t>>1)*7+((t%10)));//((t>>1)*7+((t%10)));
-		//	t = converttemp(dt_check(1)); //измеряем температуру
-			ttt = t2;///2;
-			
+		
+			//ttt = t;//внутренний;
+			ttt = t2;//внешний;
 			unsigned char ch = (ttt%10);//единицы
 			unsigned char chh = ttt%100/10;//десятки
 			unsigned char chhh = ttt%1000/100;//сотни
@@ -285,7 +285,15 @@ void fraim_out (void){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
-			t2 = converttemp(dt_check(2)); //измеряем температуру
+			if (kll==0){
+				//t = converttemp(dt_check(1)); //измеряем температуру внутреннего датчика
+				kll=1;
+				}
+			if (kll==1){
+			t2 = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
+			kll=0;
+			}
+			
 					 		                            if (start_run_fraim>=20){
 														  eff1[2] = cc;//2
 					 		                             eff1[3] = bb;//2
