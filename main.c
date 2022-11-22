@@ -37,6 +37,9 @@ unsigned char vpo;
 unsigned char klll;
 unsigned char kll;
 unsigned int ttci;
+unsigned char ch;
+unsigned char chh;
+unsigned char chhh;
 //----------------------------------------------------
 int efi[12] = {0b01111110,0b00110000,0b01101101,0b01111001,0b00110011,0b01011011,0b01011111,0b01110000,0b01111111,0b01111011,0b01001110,0b00000000
 };//0,1,2,3,4,5,6,7,8,9,С,NULL
@@ -92,37 +95,54 @@ time_tim++;
 	 TIMSK = 0b00000000;
 	 TCCR0B = 0b00000000;//останавливаем таймер
  }
+//------------Перевод двоичного результата в десятичный----
+//void digit_convert ()
 //-------------Вывод фрейма---------------------------
 void fraim_out (void){
 							
 	if (time_tim==20){//задаём время до начала бегущей строки 40~20сек 
 		start_run_fraim=0;
 		start_tim = 1;
-		 time_tim=0;
-		// kll=2;	 
+		 time_tim=0;	 
 	}
 			//ttt = ((t>>1)*7+((t%10)));//((t>>1)*7+((t%10)));
-		
-			//ttt = t;//внутренний;
-			ttt = t2;//внешний;
-			unsigned char ch = (ttt%10);//единицы
-			unsigned char chh = ttt%100/10;//десятки
-			unsigned char chhh = ttt%1000/100;//сотни
-			aa = efi[ch];
-			bb = efi[chh];
-			if (chhh == 0){//убираем первый разряд (ноль)
-				cc = efi[12];
-			}
-			else{
-				cc = efi[chhh];
-			}
+	/*	if (kll==0){
+		ttt = t;//внутренний;
+		ch = (ttt%10);//единицы
+		chh = ttt%100/10;//десятки
+		chhh = ttt%1000/100;//сотни
+		aa = efi[ch];
+		bb = efi[chh];
+		if (chhh == 0){//убираем первый разряд (ноль)
+			cc = efi[12];
+		}
+		else{
+			cc = efi[chhh];
+		}
+		}*/
+			
+															if (kll==1){
+																kll=0;
+																ttt = t2;//внешний;
+																ch = (ttt%10);//единицы
+																chh = ttt%100/10;//десятки
+																chhh = ttt%1000/100;//сотни
+																aa = efi[ch];
+																bb = efi[chh];
+																if (chhh == 0){//убираем первый разряд (ноль)
+																	cc = efi[12];
+																}
+																else{
+																	cc = efi[chhh];
+																}
+															}	
+		//kll=1;	
 
 	start_run_fraim++;
  if (start_run_fraim<=10) {//количество проходов бегущей строки 20~2раза
 	 buf[9] = eff1[1]; // Считали 1ю колонку в буфер
 	 for (int v = 1; v<=10; v++)
 	 {
-		 //kll=2;
 		 vpo ++;
 		 eff1[v] = eff1[v+1]; // Сдвинули матрицу на один столбец влево
 		
@@ -164,7 +184,8 @@ void fraim_out (void){
 						 eff1[8] = 0;//0
 						 eff1[9] = cc;//0
 						  			 break;
-									   			 case 40:
+						case 40:
+
 						 eff1[1] = aa;//0
 						 eff1[2] = 0b01001110;//2
 						 eff1[3] = 0;//3
@@ -174,82 +195,58 @@ void fraim_out (void){
 						 eff1[7] = 0;//0
 						 eff1[8] = cc;//0
 						 eff1[9] = bb;//0
+						// if (vpo==140) vpo=10;
 									   			 break;
 						 case 50:
-						 								/*	t2 = converttemp(dt_check(2)); //измеряем температуру
-						 									
-						 									ttt = t2;///2;
-						 									
-						 									unsigned char ch = (ttt%10);//единицы
-						 									unsigned char chh = ttt%100/10;//десятки
-						 									unsigned char chhh = ttt%1000/100;//сотни
-						 									aa = efi[ch];
-						 									bb = efi[chh];
-						 									if (chhh == 0){//убираем первый разряд (ноль)
-							 									cc = efi[12];
-						 									}
-						 									else{
-							 									cc = efi[chhh];
-						 									}*/
-						 
+						  if (kll==0){
+							  t = converttemp(dt_check(1)); //измеряем температуру внешнего датчика
+							  ttt = t;//внутренний;
+							  ch = (ttt%10);//единицы
+							  chh = ttt%100/10;//десятки
+							  chhh = ttt%1000/100;//сотни
+							  aa = efi[ch];
+							  bb = efi[chh];
+							  if (chhh == 0){//убираем первый разряд (ноль)
+								  cc = efi[12];
+							  }
+							  else{
+								  cc = efi[chhh];
+							  }
+						  }
 						 eff1[1] = 0b01001110;//0
 						 eff1[2] = 0;//2
 						 eff1[3] = 0;//3
 						 eff1[4] = 0;//4
 						 eff1[5] = 0;//0
 						 eff1[6] = 0;//0
-						 eff1[7] = cc;//0
-						 eff1[8] = bb;//0
-						 eff1[9] = aa;//0
-																 break;
-								 case 60://(60 || 70 || 80 || 90 ||100) :
-								/* klll++;
-									t = converttemp(dt_check(klll)); //измеряем температуру
-									 ttt = t;///2;
-									 
-									 unsigned char ch = (ttt%10);//единицы
-									 unsigned char chh = ttt%100/10;//десятки
-									 unsigned char chhh = ttt%1000/100;//сотни
-									 aa = efi[ch];
-									 bb = efi[chh];
-									 if (chhh == 0){//убираем первый разряд (ноль)
-										 cc = efi[12];
-									 }
-									 else{
-										 cc = efi[chhh];
-									 } 
-								if (klll==3) klll=1; */
+						 eff1[7] = cc;//cc
+						 eff1[8] = bb;//bb
+						 eff1[9] = aa;//aa
+						 
 
-											 
+						 
+																 break;
+								 case 60:
+									
+		 
 								 eff1[1] = 0b00000000;//0 
-							 eff1[2] = 0b00000000;//0
-							  eff1[3] = 0b00000000;//0
+							     eff1[2] = 0b00000000;//0
+							     eff1[3] = 0b00000000;//0
 								 eff1[4] = 0b00000000;//0
 								 eff1[5] = 0b00000000;//0
 								 eff1[6] = 0b00000000;//0
-								// eff1[7] = 0b00000000;//0
-								// eff1[8] = 0b00000000;//0
-							//eff1[9] = 0b00000000;//0
-												 break;
+								 
+								 						
+								break;
+			 
 									 case 110:
-					
-												/*	 klll=2;
-													 if (klll==3) klll=0;
-													 t = converttemp(dt_check(2)); //измеряем температуру*/
-
-													 	 
-									 
 			  eff1[1] = 0;//0
 			  eff1[2] = cc;//1
 			  eff1[3] = bb;//2
 			  eff1[4] = aa;//3
 			  eff1[5] = 0b01001110;//4
-			 // eff1[6] = 0;//0
-			  //eff1[7] = 0;//0
-			 // eff1[8] = 0;//0
-			  //eff1[9] = 0;//0
 			  vpo = 10;
-				break;																				
+				break;																
 		 } 
  }
  
@@ -285,14 +282,15 @@ void fraim_out (void){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
-			if (kll==0){
-				//t = converttemp(dt_check(1)); //измеряем температуру внутреннего датчика
-				kll=1;
-				}
-			if (kll==1){
-			t2 = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
-			kll=0;
-			}
+
+if (kll==1){
+	t2 = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
+}
+
+			/*if (kll==0){
+			t = converttemp(dt_check(1)); //измеряем температуру внешнего датчика
+			}*/
+			
 			
 					 		                            if (start_run_fraim>=20){
 														  eff1[2] = cc;//2
