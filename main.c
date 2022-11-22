@@ -121,7 +121,7 @@ void fraim_out (void){
 		}
 		}*/
 			
-															if (kll==1){
+															/*if (kll==1){
 																kll=0;
 																ttt = t2;//внешний;
 																ch = (ttt%10);//единицы
@@ -135,9 +135,9 @@ void fraim_out (void){
 																else{
 																	cc = efi[chhh];
 																}
-															}	
+															}*/	
 		//kll=1;	
-
+//kll=0;
 	start_run_fraim++;
  if (start_run_fraim<=10) {//количество проходов бегущей строки 20~2раза
 	 buf[9] = eff1[1]; // Считали 1ю колонку в буфер
@@ -152,6 +152,11 @@ void fraim_out (void){
 	  switch (vpo)
 		 {
 			 case 10:
+			if (klll==2) {
+				klll=0;
+			//	kll=1;
+				
+			}
 			  eff1[1] = 0;//0
 			  eff1[2] = cc;//1
 			  eff1[3] = bb;//2
@@ -198,9 +203,17 @@ void fraim_out (void){
 						// if (vpo==140) vpo=10;
 									   			 break;
 						 case 50:
+						   if (kll==1){
+							   t = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
+							   ttt = t;//внешний;
+							  
+						   }
 						  if (kll==0){
-							  t = converttemp(dt_check(1)); //измеряем температуру внешнего датчика
+							  t = converttemp(dt_check(1)); //измеряем температуру внутреннего датчика
 							  ttt = t;//внутренний;
+							  kll=1;
+						  }
+						  						
 							  ch = (ttt%10);//единицы
 							  chh = ttt%100/10;//десятки
 							  chhh = ttt%1000/100;//сотни
@@ -212,7 +225,7 @@ void fraim_out (void){
 							  else{
 								  cc = efi[chhh];
 							  }
-						  }
+						  
 						 eff1[1] = 0b01001110;//0
 						 eff1[2] = 0;//2
 						 eff1[3] = 0;//3
@@ -222,7 +235,7 @@ void fraim_out (void){
 						 eff1[7] = cc;//cc
 						 eff1[8] = bb;//bb
 						 eff1[9] = aa;//aa
-						 
+						 // kll=0;
 
 						 
 																 break;
@@ -282,10 +295,12 @@ void fraim_out (void){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
+							  klll=2;
+							
 
-if (kll==1){
-	t2 = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
-}
+//if (kll==1){
+	//t2 = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
+//}
 
 			/*if (kll==0){
 			t = converttemp(dt_check(1)); //измеряем температуру внешнего датчика
