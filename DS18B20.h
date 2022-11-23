@@ -22,12 +22,13 @@
 #define PINTEMP PIND //ввод
 #define BITTEMP 5
 
+void ds18x2_sel(unsigned char dat);
 char dt_testdevice(void);
 void dt_sendbit(char bt);
 void dt_sendbyte(unsigned char bt);
 char dt_readbit(void);
 unsigned char dt_readbyte(void);
-int dt_check(void);
-char converttemp (unsigned int tt);
+int dt_check(unsigned char izm);
+//char converttemp (unsigned int tt);
 
 #endif /* WIREE_H_ */
