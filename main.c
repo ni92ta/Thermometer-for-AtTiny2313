@@ -203,16 +203,17 @@ void fraim_out (void){
 						// if (vpo==140) vpo=10;
 									   			 break;
 						 case 50:
-						   if (kll==1){
-							   t = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
-							   ttt = t;//внешний;
+						   /*if (kll==1){
+							   t2 = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
+							   ttt = t2;//внешний;
+							   
 							  
-						   }
-						  if (kll==0){
-							  t = converttemp(dt_check(1)); //измеряем температуру внутреннего датчика
+						   }*/
+						//  if (kll==0){
+							  t = converttemp(dt_check(2)); //измеряем температуру внутреннего датчика
 							  ttt = t;//внутренний;
-							  kll=1;
-						  }
+							  //kll=1;
+						 // }
 						  						
 							  ch = (ttt%10);//единицы
 							  chh = ttt%100/10;//десятки
@@ -235,12 +236,27 @@ void fraim_out (void){
 						 eff1[7] = cc;//cc
 						 eff1[8] = bb;//bb
 						 eff1[9] = aa;//aa
-						 // kll=0;
+						  
 
 						 
 																 break;
 								 case 60:
-									
+															 /*  if (kll==1){
+																   t2 = converttemp(dt_check(2)); //измеряем температуру внешнего датчика
+																   ttt = t2;//внешний;
+																   kll=0; 
+															   }
+															   							  ch = (ttt%10);//единицы
+															   							  chh = ttt%100/10;//десятки
+															   							  chhh = ttt%1000/100;//сотни
+															   							  aa = efi[ch];
+															   							  bb = efi[chh];
+															   							  if (chhh == 0){//убираем первый разряд (ноль)
+																   							  cc = efi[12];
+															   							  }
+															   							  else{
+																   							  cc = efi[chhh];
+															   							  }*/
 		 
 								 eff1[1] = 0b00000000;//0 
 							     eff1[2] = 0b00000000;//0
@@ -253,6 +269,7 @@ void fraim_out (void){
 								break;
 			 
 									 case 110:
+									 
 			  eff1[1] = 0;//0
 			  eff1[2] = cc;//1
 			  eff1[3] = bb;//2
@@ -295,7 +312,8 @@ void fraim_out (void){
 		if (y == 9) {
 			y = 0;
 			l -= 9;
-							  klll=2;
+			//kll=0;
+							  //klll=2;
 							
 
 //if (kll==1){
