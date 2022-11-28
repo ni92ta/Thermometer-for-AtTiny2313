@@ -23,8 +23,10 @@ unsigned char t2;//Переменная для хранения результа
 unsigned char aa;
 unsigned char bb;
 unsigned char cc;
+unsigned char dd;
 unsigned char vpo;
 unsigned char kll;
+unsigned char chh_h;
 unsigned char ch;
 unsigned char chh;
 unsigned char chhh;
@@ -64,7 +66,7 @@ time_tim++;
 //-------------Вывод кадра---------------------------
 void frame_out (void){
 							
-	if (time_tim==25){//задаём время до начала бегущей строки 40~20сек 
+	if (time_tim==15){//задаём время до начала бегущей строки 40~20сек 
 		start_run_fraim=0;
 		start_tim = 1;
 		 time_tim=0;
@@ -93,13 +95,13 @@ void frame_out (void){
 			  result_output[2] = cc;//1
 			  result_output[3] = bb;//2
 			  result_output[4] = aa;//3
-			  result_output[5] = 0b01001110;//4
+			  result_output[5] = dd;//4
 			 break;
 			 	   case 20:
 				    result_output[1] = cc;//0
 			        result_output[2] = bb;//2
 			        result_output[3] = aa;//3
-			        result_output[4] = 0b01001110;//4
+			        result_output[4] = dd;//40b01001110
 			        result_output[5] = 0;//0
 			  	    result_output[6] = 0;//0
 			  		result_output[7] = 0;//0
@@ -109,7 +111,7 @@ void frame_out (void){
 						 case 30:
 						  result_output[1] = bb;//0
 						  result_output[2] = aa;//2
-						  result_output[3] = 0b01001110;//3
+						  result_output[3] = dd;//30b01001110
 						  result_output[4] = 0;//4
 						  result_output[5] = 0;//0
 						  result_output[6] = 0;//0
@@ -119,7 +121,7 @@ void frame_out (void){
 						 break;
 						       case 40:
 						        result_output[1] = aa;//0
-								result_output[2] = 0b01001110;//2
+								result_output[2] = dd;//20b01001110
 								result_output[3] = 0;//3
 								result_output[4] = 0;//4
 								result_output[5] = 0;//0
@@ -129,15 +131,33 @@ void frame_out (void){
 								result_output[9] = bb;//0
 							   break;
 									 case 50:
-						  if (kll==0){
-							  t = dt_check(1);//измеряем температуру внутреннего датчика
+						  if (kll==0){//0
+							  t = dt_check(1);//измеряем температуру внутреннего датчика 1
+							  // chh_h=0b01001110;//дробная часть
+							   dd=0b01001110;
+							   							  ch = t%10;//единицы
+							   							  chh = t%100/10;//десятки
+							   							  chhh = t%1000/100;//сотни
+							   
 						  }		
-						  if (kll==1){
-							  t = dt_check(2); //измеряем температуру внешнего датчика
+						  if (kll==1){//1
+							  t = dt_check(2); //измеряем температуру внешнего датчика 2
+							   
+							   							   							  chh_h = t%10;//единицы
+							   							   							  ch = t%100/10;//десятки
+							   							   							  chh = t%1000/100;//сотни
+							                                                          chhh = t/1000;//сотни
+							   
+							                             // chh_h=t%10;//дробная часть
+							   							//  ch = t%100/10;//единицы
+							   							 // chh = t%1000/100;//десятки
+							   							 // chhh = t/1000;//сотни
+															 dd=efi[chh_h];
+							   
 						  }		
-							  ch = t%10;//единицы
-							  chh = t%100/10;//десятки
-							  chhh = t%1000/100;//сотни
+							 
+
+							  
 							  aa = efi[ch];
 							  bb = efi[chh];
 							  if (chhh == 0){//убираем первый разряд (ноль)
@@ -147,7 +167,7 @@ void frame_out (void){
 								  cc = efi[chhh];
 							  }
 						  
-						 result_output[1] = 0b01001110;//0
+						 result_output[1] = dd;//00b01001110
 						 result_output[2] = 0;//2
 						 result_output[3] = 0;//3
 						 result_output[4] = 0;//4
@@ -170,7 +190,7 @@ void frame_out (void){
 			  result_output[2] = cc;//1
 			  result_output[3] = bb;//2
 			  result_output[4] = aa;//3
-			  result_output[5] = 0b01001110;//4
+			  result_output[5] = dd;//40b01001110
 			  vpo = 10;
 				break;																
 		 } 
