@@ -15,6 +15,6 @@
 #include "DS18B20.h"
 
 unsigned char chhh;
-//void out_led (int);
+//void out_led (void);
 
 #endif /* MAIN_H_ */
