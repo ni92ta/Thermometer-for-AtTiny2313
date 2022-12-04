@@ -14,6 +14,7 @@
 #include <util/delay.h>
 #include "DS18B20.h"
 
+unsigned char chhh;
 //void out_led (int);
 
 #endif /* MAIN_H_ */
