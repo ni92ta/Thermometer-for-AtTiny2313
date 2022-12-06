@@ -20,10 +20,10 @@ unsigned char y;
 unsigned char v;
 int temp;//Переменная для хранения результата измерения внутреннего датчика
 //int t2;//Переменная для хранения результата измерения внешнего датчика
-unsigned char aa;
-unsigned char bb;
-unsigned char cc;
-unsigned char dd;
+unsigned char digit3;
+unsigned char digit2;
+unsigned char digit1;
+unsigned char digit4;
 unsigned char vpo;
 unsigned char kll;
 unsigned char chh_h;
@@ -58,7 +58,7 @@ time_tim++;
  }
 //-------------Вывод кадра---------------------------
 void frame_out (void){						
-	if (time_tim==15){//задаём время до начала бегущей строки 40~20сек 
+	if (time_tim==10){//задаём время до начала бегущей строки 40~20сек 
 		start_run_fraim=0;
 		start_tim = 1;
 		 time_tim=0;
@@ -72,7 +72,7 @@ void frame_out (void){
 
 
 	start_run_fraim++;	
- if (start_run_fraim<=10) {//количество проходов бегущей строки 20~2раза
+ if (start_run_fraim<=5) {//количество проходов бегущей строки 20~2раза
 	 buf[9] = result_output[1]; // Считали 1ю колонку в буфер
 	 for (int v = 1; v<=10; v++)
 	 {
@@ -83,44 +83,44 @@ void frame_out (void){
 	  switch (vpo)
 		 {
 			 case 10:
-			  result_output[1] = 0;//0
-			  result_output[2] = cc;//1
-			  result_output[3] = bb;//2
-			  result_output[4] = aa;//3
-			  result_output[5] = dd;//4
+			  result_output[1] = 0;//
+			  result_output[2] = digit1;//
+			  result_output[3] = digit2;//
+			  result_output[4] = digit3;//
+			  result_output[5] = digit4;//
 			 break;
 			 	   case 20:
-				    result_output[1] = cc;//0
-			        result_output[2] = bb;//2
-			        result_output[3] = aa;//3
-			        result_output[4] = dd;//40b01001110
-			        result_output[5] = 0;//0
-			  	    result_output[6] = 0;//0
-			  		result_output[7] = 0;//0
-			  		result_output[8] = 0;//0
-			  		result_output[9] = 0;//0
+					result_output[2] = digit1;//
+			        result_output[3] = digit2;//
+			        result_output[4] = digit3;//
+			        result_output[5] = digit4;//
+			        //result_output[6] = 0;//
+			  	    //result_output[7] = 0;//
+			  		//result_output[8] = 0;//
+			  		//result_output[9] = 0;//
+			  		//result_output[10] = 0;//
 			 	   break;
 						 case 30:
-						  result_output[1] = bb;//0
-						  result_output[2] = aa;//2
-						  result_output[3] = dd;//30b01001110
-						  result_output[4] = 0;//4
-						  result_output[5] = 0;//0
-						  result_output[6] = 0;//0
-						  result_output[7] = 0;//0
-						  result_output[8] = 0;//0
-						  result_output[9] = cc;//0
+						  result_output[2] = digit2;//
+						  result_output[3] = digit3;//
+						  result_output[4] = digit4;//
+						  //result_output[5] = 0;//
+						  //result_output[6] = 0;//
+						  //result_output[7] = 0;//
+						  //result_output[8] = 0;//
+						  //result_output[9] = 0;//
+						  //result_output[10] = digit1;//
 						 break;
 						       case 40:
-						        result_output[1] = aa;//0
-								result_output[2] = dd;//20b01001110
-								result_output[3] = 0;//3
-								result_output[4] = 0;//4
-								result_output[5] = 0;//0
-								result_output[6] = 0;//0
-								result_output[7] = 0;//0
-								result_output[8] = cc;//0
-								result_output[9] = bb;//0
+						        result_output[2] = digit3;//
+								result_output[3] = digit4;//
+								//result_output[4] = 0;//
+								//result_output[5] = 0;//
+								//result_output[6] = 0;//
+								//result_output[7] = 0;//
+								//result_output[8] = 0;//-
+								//result_output[9] = digit1;//
+								//result_output[10] = digit2;//
 							   break;
 									 case 50:
 						  if (kll == 0){//0
@@ -134,8 +134,8 @@ void frame_out (void){
 							  temp = (temp/2);
 								  ch = temp%10;//единицы
 								  chh = temp%100/10;//десятки
-								 // chhh = temp%1000/100;//сотни
-								 chhh = 11;
+								   chhh = 11;
+
 								  
 								  							 // cc = efi[11];
 								  							  /*  if (chhh == 0){//убираем первый разряд (ноль)
@@ -148,61 +148,74 @@ void frame_out (void){
 								  
 						  }		
 						  if (kll == 1){//1
-							  temp = dt_check(2);//измеряем температуру внешнего датчика 2
-							 // temp = (((temp>>1)*10)+((temp%10)));
-							   							  							
-							   						/*	 ch = t2%10;//единицы
-							   							 chh = t2%100/10;//десятки
-							   							 chhh = t2%1000/100;//сотни
-							   							 chh_h = t2/1000;
-							   */
-													      //  cc = efi[10];
-														    chh_h = temp%10;
-														    ch = temp%100/10;//единицы
-														    chh = temp%1000/100;//десятки
-														  //  cc = efi[10];
-														 // chhh = 10;
-														   
+							  //temp = dt_check(2);//измеряем температуру внешнего датчика 2
+
+														  //  chh_h = temp%10;
+														   // ch = temp%100/10;//единицы
+														   // chh = temp%1000/100;//десятки
+
+ 
 														   
 						  }		
 							 
-//chh_h=t/1000;
 
-
-
-							  dd = efi[chh_h];
-							  aa = efidot[ch];//с точкой
-							  bb = efi[chh];
-cc = efi[chhh];
-		
-			  
-						 result_output[1] = dd;//00b01001110
-						 result_output[2] = 0;//2
-						 result_output[3] = 0;//3
-						 result_output[4] = 0;//4
-						 result_output[5] = 0;//0
-						 result_output[6] = 0;//0
-						 result_output[7] = cc;//cc
-						 result_output[8] = bb;//bb
-						 result_output[9] = aa;//aa
+							  digit4 = efi[chh_h];
+							  digit3 = efidot[ch];//с точкой
+							  digit2 = efi[chh];
+                              //digit1 = efi[chhh];
+							  digit1 = efi[chhh];	
+						 result_output[2] = digit4;//
+						 //result_output[3] = 0;//
+						 //result_output[4] = 0;//
+						 //result_output[5] = 0;//
+						 //result_output[6] = 0;//
+						 //result_output[7] = 0;//
+						// result_output[8] = digit1;//
+						// result_output[9] = digit2;//
+						// result_output[10] = digit3;//
 						 break;
-								 case 60:
+								/* case 60:
 								 for (unsigned char i=1;i<=6;i++){
 									  result_output[i] = 0b00000000;//0 
-								 }
-								// result_output[1] = 0b00000000;//0 
-							    // result_output[2] = 0b00000000;//0
-							    // result_output[3] = 0b00000000;//0
-								// result_output[4] = 0b00000000;//0
-								// result_output[5] = 0b00000000;//0
-								// result_output[6] = 0b00000000;//0						
+								 }	
+								// vpo = 10;				
 								 break;
+									*/					
+												 case 70:
+												 result_output[2] = 0;//-
+												 result_output[3] = 0;//
+												 result_output[4] = 0;//
+												 result_output[5] = digit1;//
+												 // result_output[6] = digit3;//
+												 // result_output[7] = digit4;//
+												 break;				 
+								 case 80:
+			  result_output[2] = 0;//-
+			  result_output[3] = 0;//
+			  result_output[4] = digit1;//
+			  result_output[5] = digit2;//
+			 // result_output[6] = digit3;//
+			 // result_output[7] = digit4;//
+								 						 break;
+									 case 90:
+									result_output[2] = 0;//-
+									result_output[3] = digit1;//
+									result_output[4] = digit2;//
+									result_output[5] = digit3;//
+								 break;
+								 									 case 100:
+								 									 result_output[2] = digit1;//-
+								 									 result_output[3] = digit2;//
+								 									 result_output[4] = digit3;//
+								 									 result_output[5] = digit4;//
+								 									 break;
+								
 								case 110:					 
-			  result_output[1] = 0;//0
-			  result_output[2] = cc;//1
-			  result_output[3] = bb;//2
-			  result_output[4] = aa;//3
-			  result_output[5] = dd;//40b01001110
+			  result_output[1] = 0;//-
+			  result_output[2] = digit1;//
+			  result_output[3] = digit2;//
+			  result_output[4] = digit3;//
+			  result_output[5] = digit4;//
 			  vpo = 10;
 				break;																
 		 } 
