@@ -30,4 +30,7 @@ char dt_readbit(void);
 unsigned char dt_readbyte(void);
 int dt_check(unsigned char izm);
 
+//unsigned char chhh;
+
+
 #endif /* WIREE_H_ */
