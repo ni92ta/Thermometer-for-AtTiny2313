@@ -61,14 +61,12 @@ void frame_out (void){
 		start_tim = 1;
 		 time_tim=0;
 		 v++;
-		 kll=0;
+		 kll=1;//kll=0;
 		 if (v>=2) {
 			 kll=1;
 			 v=0;
 		 }
 	}
-
-
 	start_run_fraim++;	
  if (start_run_fraim<=10) {//количество проходов бегущей строки 20~2раза
 	 buf[9] = result_output[1]; // Считали 1ю колонку в буфер
@@ -142,9 +140,7 @@ void frame_out (void){
 								  							   }
 								  							  else{
 								  							  	  cc = efi[chhh];
-								  							   }*/
-								  
-								  
+								  							   }*/	  
 						  }		
 						  if (kll == 1){//1
 							  temp = dt_check(2);//измеряем температуру внешнего датчика 2
@@ -160,9 +156,7 @@ void frame_out (void){
 														    ch = temp%100/10;//единицы
 														    chh = temp%1000/100;//десятки
 														  //  cc = efi[10];
-														 // chhh = 10;
-														   
-														   
+														 // chhh = 10;							   
 						  }		
 							 
 
