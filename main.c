@@ -61,7 +61,7 @@ void frame_out (void){
 		start_tim = 1;
 		 time_tim=0;
 		 v++;
-		 kll=1;//kll=0;
+		 kll=0;//kll=0;
 		 if (v>=2) {
 			 kll=1;
 			 v=0;
@@ -132,7 +132,8 @@ void frame_out (void){
 								  ch = temp%10;//единицы
 								  chh = temp%100/10;//десятки
 								 // chhh = temp%1000/100;//сотни
-								 chhh = 11;
+								// chhh = 11;//0b00000100
+								 digit1 = 0b00000100;
 								  
 								  							 // cc = efi[11];
 								  							  /*  if (chhh == 0){//убираем первый разряд (ноль)
@@ -156,15 +157,16 @@ void frame_out (void){
 														    ch = temp%100/10;//единицы
 														    chh = temp%1000/100;//десятки
 														  //  cc = efi[10];
-														 // chhh = 10;							   
+														  chhh = 11;
+														   digit1 = efi[chhh];		
+														 						   
 						  }		
 							 
 
 							  digit4 = efi[chh_h];
 							  digit3 = efi[ch] | 0b10000000;//с точкой
 							  digit2 = efi[chh];
-                              digit1 = efi[chhh];
-							  //digit1 = efi[8];	
+                             // digit1 = efi[chhh];	
 			  
 						 result_output[1] = digit4;//4
 						 result_output[2] = 0;//2
