@@ -157,7 +157,7 @@ void frame_out (void){
 														    ch = temp % 100 / 10;//единицы
 														    chh = temp % 1000 / 100;//десятки
 														  //  cc = efi[10];
-														  chhh = 11;
+														  
 														   digit1 = efi[chhh];		
 														 						   
 						  }		
