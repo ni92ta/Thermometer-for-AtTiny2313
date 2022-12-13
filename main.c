@@ -61,9 +61,9 @@ void frame_out (void){
 		start_tim = 1;
 		 time_tim = 0;
 		 v ++;
-		 kll = 0;//kll=0;
+		 kll = 1;//kll=0;
 		 if (v >= 2) {
-			 kll = 1;
+			 kll = 1;//kll=1;
 			 v = 0;
 		 }
 	}
