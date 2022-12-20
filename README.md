@@ -8,3 +8,20 @@ I just added a pull-up to the reset pin of the MK, picked up current-limiting re
 You can also add transistor switches to the indicator cathodes to reduce the current load on the MK.
 The resulting circuit diagram is shown in the screenshot below:
 
+![image](https://user-images.githubusercontent.com/91215296/208711816-4750ac30-1270-408d-811f-f7d0f28af8c8.png)
+
+The thermometer is built on the basis of MK AtTiny 2313, an LED indicator with a common cathode is responsible for displaying temperature readings. Measurements are carried out by sensors of the 18x20 series. Sensor 18b20 for measuring outside temperature, sensor 1820 for measuring indoor temperature.
+
+![Thermometer](https://user-images.githubusercontent.com/91215296/208718909-fbaab430-eb3d-4233-a7be-2d1d23f1d868.gif)
+
+The printed circuit board is shown in the screenshots below:
+
+![Thermometer_3D_PCB_Top](https://user-images.githubusercontent.com/91215296/208720142-4f7ca8df-feb0-45ff-a7dd-ff00014941d8.png)
+
+![Thermometer_3D_PCB_Bottom](https://user-images.githubusercontent.com/91215296/208720131-e4f7f64c-4b91-4fa7-b2e6-1865d56d94f3.png)
+
+![Thermometer_PCB_Bottom](https://user-images.githubusercontent.com/91215296/208720101-700be5a2-36b0-4ed6-bdc7-f6b934a702ee.png)
+
+
+
+
